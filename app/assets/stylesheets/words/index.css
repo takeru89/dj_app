@@ -1,0 +1,70 @@
+/* ヘッダー上部 */
+.header-upper {
+  height: 80px;
+  background-color: #003366;
+  display: flex;
+  align-items: center;
+}
+
+.heading {
+  width: 50%;
+}
+
+.app-name {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  margin-left: 15px;
+}
+
+.navbar {
+  width: 50%;
+}
+
+.nav-lists {
+  display: flex;
+  justify-content: flex-end;
+}
+
+li {
+  font-size: 14px;
+  font-weight: bold;
+  color: #003366;
+  list-style: none;
+  margin-right: 15px;
+  padding: 3px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+/* 検索フォーム */
+.header-lower {
+  padding: 10px 15px 0 0; 
+}
+
+.search-form {
+  text-align: right;
+}
+
+.search-filtering {
+  height: 30px;
+  width: 150px;
+  border: 2px solid #003366;
+  border-radius: 5px;
+}
+
+.search-word{
+  height: 30px;
+  width: 300px;
+  border: 2px solid #003366;
+  border-radius: 5px;
+}
+
+.search-button {
+  height: 30px;
+  color: white;
+  background-color: #003366;
+  border-radius: 5px;
+}
+
+

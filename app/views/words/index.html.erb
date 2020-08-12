@@ -1,0 +1,27 @@
+<header>
+  <div class="header-upper">
+    <div class="heading">
+      <h1 class="app-name">Dict Japonicus</h1>
+    </div>
+    <div class="navbar">
+      <% if user_signed_in? %>
+        <ul class="nav-lists">
+          <li><%= link_to current_user.nickname, "#" %></li>
+          <li><%= link_to "Logout", "#" %></li>
+        </ul>
+      <% else %>
+        <ul class="nav-lists">
+          <li><%= link_to "Login", new_user_session_path %></li>
+          <li><%= link_to "Sign Up", new_user_registration_path %></li>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+  <div class="header-lower">
+    <form class=search-form>
+      <input type="text" placeholder="filtering" class="search-filtering">
+      <input type="text" placeholder="word" class="search-word">
+      <input type="submit" value="Search" class="search-button">
+    </form>
+  </div>
+</header>
