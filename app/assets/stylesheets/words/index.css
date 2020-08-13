@@ -27,14 +27,18 @@
 }
 
 li {
+  list-style: none;
+  margin-right: 15px;
+}
+
+.nav-piece {
   font-size: 14px;
   font-weight: bold;
   color: #003366;
-  list-style: none;
-  margin-right: 15px;
+  background-color: white;
+  text-decoration: none;
   padding: 3px;
   border-radius: 5px;
-  background-color: white;
 }
 
 /* 検索フォーム */
@@ -66,5 +70,3 @@ li {
   background-color: #003366;
   border-radius: 5px;
 }
-
-
