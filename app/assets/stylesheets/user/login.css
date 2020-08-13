@@ -1,0 +1,70 @@
+.background {
+  height: 100vh;
+  background-color: #003366;
+}
+
+.login-form {
+  display: flex;
+  justify-content: center;
+  background-color: #003366;
+}
+
+.form-wrap {
+  width: 65%;
+  max-width: 500px;
+  background-color: #003366;
+  border: 1px solid white;
+  margin: 70px auto;
+}
+
+.form-header {
+  text-align: center;
+  font-size: 15px;
+  color: white;
+}
+
+.login-flash-message {
+  color: white;
+  text-align: center;
+}
+
+.form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+.form-text-wrap {
+  height: 25px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.form-text {
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+}
+
+.form-content {
+  height: 25px;
+  width: 70%;
+  margin: 0 auto;
+  display: block
+}
+
+.login {
+  text-align: center;
+  margin: 60px 0 35px 0;
+}
+
+.login-button {
+  height: 30px;
+  width: 100px;
+  font-size: 14px;
+  color: #003366;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 5px;
+}
