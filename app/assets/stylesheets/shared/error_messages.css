@@ -7,5 +7,6 @@
 .error-message {
   font-size: 1.3vw;
   list-style: circle;
-  color: white;
+  color:white;
+  background-color: #003366;
 }

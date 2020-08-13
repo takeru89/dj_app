@@ -7,7 +7,7 @@
       <% if user_signed_in? %>
         <ul class="nav-lists">
           <li><%= link_to current_user.nickname, "#" %></li>
-          <li><%= link_to "Logout", "#" %></li>
+          <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
         </ul>
       <% else %>
         <ul class="nav-lists">
