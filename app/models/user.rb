@@ -12,9 +12,9 @@ class User < ApplicationRecord
 
   with_options presence: true do
     validates :nickname
-    validates :email, uniqueness: { case_sensitive: false},
-                      format: { with: EMAIL_REGEX}
-    validates :password, length: { minimum: 8}, format: { with: PASSWORD_REGEX }
-    validates :password_confirmation, confirmation: true 
+    validates :email, uniqueness: { case_sensitive: false },
+                      format: { with: EMAIL_REGEX }
+    validates :password, length: { minimum: 8 }, format: { with: PASSWORD_REGEX }
+    validates :password_confirmation, confirmation: true
   end
 end
