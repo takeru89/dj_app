@@ -20,8 +20,8 @@
 | user        | references | null: false, foreign_key: true |
 | kana        | string     | null: false                    |
 | kanji       | string     |
+| english     | string     | null: false                    |
 | pos         | integer    | null: false                    |
-| meaning     | string     | null: false                    |
 | explanation | text       | null: false                    |
 
 ### Association
