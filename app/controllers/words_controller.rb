@@ -20,6 +20,6 @@ class WordsController < ApplicationController
   private
 
   def word_params
-    params.require(:word).permit(:kana, :kanji, :english, :pos_id, :explanation, :image).merge(user_id: current_user.id)
+    params.require(:word).permit(:kana, :kanji, :english, :word_class_id, :explanation, :image).merge(user_id: current_user.id)
   end
 end
