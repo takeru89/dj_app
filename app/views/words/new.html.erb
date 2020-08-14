@@ -1,0 +1,37 @@
+<%= form_with model: @word, url: words_path, class: "word-registration", local: true do |f| %>
+  <div class="post-header">
+    <h1 class="post-header-text">
+      Post Word Info.
+    </h1>
+  </div>
+  <div class="post-contents"></div>
+    <div class="word-kana-wrap">
+      <div class="kana-form-title">kana</div>
+      <%= f.text_field :kana, class: "kana-text" %>
+    </div>
+    <div class="word-kanji-wrap">
+      <div class="kanji-form-title">kanji</div>
+      <%= f.text_field :kanji, class: "kanji-text" %>
+    </div>
+    <div class="word-english-wrap">
+      <div class="english-form-title">english</div>
+      <%= f.text_field :english, class: "english-text" %>
+    </div>
+    <div class="word-class-wrap">
+      <div class="class-form-title">word class</div>
+      <%= f.collection_select(:word_class_id, WordClass.all, :id, :name, {}, {class: "class-select"}) %>
+    </div>
+    <div class="image">
+      <div class="image-form-title">image</div>
+      <%= f.file_field :image, class: "image-button"%>
+    </div>
+    <div class="explanation">
+      <div class="explanation-form-title">explanation</div>
+      <%= f.text_area :explanation, class:"explanation-text" %>
+    </div>
+  </div>
+  <div class="post">
+    <%= f.submit "Post", class:"post-button" %>
+    <%= button_to "Back", words_path, class:"back-button" %>
+  </div>
+<% end %>
