@@ -1,6 +1,6 @@
 class WordClass < ActiveHash::Base
   self.data = [
-    { id: 1, name:  '--' },
+    { id: 1, name:  '---' },
     { id: 2, name:  'noun'},
     { id: 3, name:  'verb'},
     { id: 4, name:  'i-adjective'},
