@@ -12,7 +12,7 @@ class Word < ApplicationRecord
     validates :kana, format: { with: KANA_REGEX }
     validates :english, format: { with: ENGLISH_REGEX }
     validates :word_class_id, numericality: { other_than: 1, message: "can't be blank" }
-    validates :explanation, length: {maximum: 2000}
+    validates :explanation, length: { maximum: 2000 }
   end
-  validates :kanji, format: { with: KANJI_REGEX }, if: Proc.new { |word| word.kanji.present? }
+  validates :kanji, format: { with: KANJI_REGEX }, if: proc { |word| word.kanji.present? }
 end

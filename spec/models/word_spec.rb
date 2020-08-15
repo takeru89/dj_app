@@ -26,29 +26,29 @@ describe Word do
       end
 
       it 'kanaに仮名以外の文字が入ると登録できない' do
-        vocab = ['ringo', '林檎']
+        vocab = %w[ringo 林檎]
         vocab.each do |v|
           @word.kana = v
           @word.valid?
-          expect(@word.errors.full_messages).to include("Kana is invalid")
+          expect(@word.errors.full_messages).to include('Kana is invalid')
         end
       end
 
       it 'kanjiに漢字が1字以上入っていないと登録できない' do
-        vocab = ['りんご', 'リンゴ']
+        vocab = %w[りんご リンゴ]
         vocab.each do |v|
           @word.kanji = v
           @word.valid?
-          expect(@word.errors.full_messages).to include("Kanji is invalid")
+          expect(@word.errors.full_messages).to include('Kanji is invalid')
         end
       end
 
       it 'kanjiに英数字が入っていると登録できない' do
-        vocab = ['林5', '林go']
+        vocab = %w[林5 林go]
         vocab.each do |v|
           @word.kanji = v
           @word.valid?
-          expect(@word.errors.full_messages).to include("Kanji is invalid")
+          expect(@word.errors.full_messages).to include('Kanji is invalid')
         end
       end
 
@@ -59,11 +59,11 @@ describe Word do
       end
 
       it 'englishに漢字仮名が含まれると登録できない' do
-        vocab = ['appる', 'appル', 'app檎']
+        vocab = %w[appる appル app檎]
         vocab.each do |v|
           @word.english = v
           @word.valid?
-          expect(@word.errors.full_messages).to include("English is invalid")
+          expect(@word.errors.full_messages).to include('English is invalid')
         end
       end
 
