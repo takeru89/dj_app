@@ -15,14 +15,14 @@
 
 ## words テーブル
 
-| Column      | Type       | Options                        |
-| ----------- | ---------  | -----------------------------  |
-| user        | references | null: false, foreign_key: true |
-| kana        | string     | null: false                    |
-| kanji       | string     |
-| pos         | integer    | null: false                    |
-| meaning     | string     | null: false                    |
-| explanation | text       | null: false                    |
+| Column        | Type       | Options                        |
+| ------------- | ---------  | -----------------------------  |
+| user          | references | null: false, foreign_key: true |
+| kana          | string     | null: false                    |
+| kanji         | string     |
+| english       | string     | null: false                    |
+| word_class_id | integer    | null: false                    |
+| explanation   | text       | null: false                    |
 
 ### Association
 
