@@ -1,6 +1,7 @@
 /* ヘッダー上部 */
 .header-upper {
   height: 80px;
+  min-width: 700px;
   background-color: #003366;
   display: flex;
   align-items: center;
@@ -43,6 +44,7 @@ li {
 
 /* 検索フォーム */
 .header-lower {
+  min-width: 700px;
   padding: 10px 15px 0 0; 
 }
 
@@ -69,4 +71,25 @@ li {
   color: white;
   background-color: #003366;
   border-radius: 5px;
+}
+
+.tag-cloud-wrap {
+  min-width: 700px;
+  display: flex;
+  justify-content: center;
+}
+
+.tag-cloud{
+
+}
+
+
+.tagcloud-piece {
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  background: -webkit-linear-gradient(0deg, blue, #15b610, rgb(247, 183, 5));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
