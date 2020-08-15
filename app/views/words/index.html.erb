@@ -26,3 +26,26 @@
     </form>
   </div>
 </header>
+
+<script>
+	$(document).ready(function(){
+		$('#tagcloud').tagoSphere({
+		});
+	});
+</script>
+<style>
+* {
+  list-style-type: none;
+  text-decoration: none;
+}
+</style>
+
+<div class="tag-cloud-wrap">
+  <div id="tagcloud", class="tag-cloud">
+    <ul>
+      <% @words.each do |w| %>
+        <li><%= link_to w.kana, "#", class: "tagcloud-piece" %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
