@@ -14,5 +14,5 @@ class Word < ApplicationRecord
     validates :word_class_id, numericality: { other_than: 1, message: "can't be blank" }
     validates :explanation, length: {maximum: 2000}
   end
-  validates :kanji, format: { with: KANJI_REGEX, message: 'must be included.'}, if: Proc.new { |word| word.kanji.present? }
+  validates :kanji, format: { with: KANJI_REGEX }, if: Proc.new { |word| word.kanji.present? }
 end
