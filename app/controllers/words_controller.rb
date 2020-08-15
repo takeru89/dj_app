@@ -2,6 +2,7 @@ class WordsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
 
   def index
+    @words = Word.includes(:user).order('created_at DESC').limit(200)
   end
 
   def new
