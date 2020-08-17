@@ -42,6 +42,12 @@ class WordsController < ApplicationController
     end
   end
 
+  def search
+    method = params[:search_method]
+    word = params[:search_word]
+    @words = Word.search(method, word)
+  end
+
   private
 
   def word_params
