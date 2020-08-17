@@ -34,8 +34,10 @@
         <%= @word.kana %>
       </div>
       <div class="info-edit-button">
-        <%= link_to image_tag('edit_button.png', class:"edit-button"), edit_word_path(@word.id) %>
-        <%= image_tag 'delete_button.png', class:"edit-button" %>
+        <% if @word.user_id == current_user.id %>
+          <%= link_to image_tag('edit_button.png', class:"edit-button"), edit_word_path(@word.id) %>
+          <%= link_to image_tag('delete_button.png', class:"edit-button"), word_path(@word.id), method: :delete, data: {confirm: "Do you really want to delete this word-info?"} %>
+        <% end %>
       </div>
     </div>
   </div>

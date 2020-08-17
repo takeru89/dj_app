@@ -1,6 +1,6 @@
 class WordsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_word, only: [:show, :edit, :update]
+  before_action :set_word, only: [:show, :edit, :update, :destroy]
 
   def index
     @words = Word.includes(:user).order('created_at DESC').limit(200)
@@ -30,6 +30,15 @@ class WordsController < ApplicationController
       redirect_to @word
     else
       render :edit
+    end
+  end
+
+  def destroy
+    if @word.destroy
+      redirect_to root_path
+    else
+      flash.now[:alert] = 'Delete Failed'
+      render @word
     end
   end
 
