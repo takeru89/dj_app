@@ -34,7 +34,7 @@
         <%= @word.kana %>
       </div>
       <div class="info-edit-button">
-        <%= image_tag 'edit_button.png', class:"edit-button" %>
+        <%= link_to image_tag('edit_button.png', class:"edit-button"), edit_word_path(@word.id) %>
         <%= image_tag 'delete_button.png', class:"edit-button" %>
       </div>
     </div>

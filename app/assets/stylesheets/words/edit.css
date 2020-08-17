@@ -1,0 +1,96 @@
+/* フォーム全体 */
+.word-edit {
+  width: 50%;
+  margin: 50px auto;
+
+}
+
+.edit-header-text {
+  font-size: 20px;
+  color: #003366;
+  border-bottom: 4px solid #003366;
+  margin: 0 auto;
+}
+
+/* フォーム内部 */
+.edit-contents {
+  margin-top: 50px;
+}
+
+.word-kana-wrap, .word-kanji-wrap, .word-english-wrap, .word-class-wrap, .image {
+  margin-bottom: 20px;
+  width: 60%;
+}
+
+.title-wrap {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+}
+
+.kana-form-title, .kanji-form-title, .english-form-title, .class-form-title, .explanation-form-title, .image-form-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.word-required {
+  font-size: 11px;
+  color: red;
+  margin-left: 10px;
+}
+
+.kana-text, .kanji-text, .english-text, .pos-select {
+  height: 25px; 
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.class-select {
+  height: 30px; 
+  width: 50%;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.explanation-text {
+  height: 300px;
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+/* 投稿ボタン */
+.edit {
+  width: 180px;
+  margin: 20px auto 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.post-button{
+  height: 30px;
+  width: 70px;
+  color: white;
+  font-weight: bold;
+  background-color: #003366;
+  border-radius: 5px;
+}
+
+.back-button {
+  height: 26px;
+  width: 68px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #003366;
+  background-color: white;
+  border-radius: 5px;
+  border-top: 2px solid gray; border-left: 2px solid gray;
+  border-bottom: 2px solid black; border-right: 2px solid black;
+  text-decoration: none;
+  text-align: center;
+  line-height: 27px;
+}
+
+
