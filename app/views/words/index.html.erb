@@ -19,11 +19,11 @@
     </div>
   </div>
   <div class="header-lower">
-    <form class=search-form>
-      <input type="text" placeholder="filtering" class="search-filtering">
-      <input type="text" placeholder="word" class="search-word">
-      <input type="submit" value="Search" class="search-button">
-    </form>
+    <%= form_with(url: search_words_path, local: true, method: :get, class:"search-form") do |form| %>
+      <label class="search-filtering"><%= form.select :search_method, [["forward match", "forward_match"], ["backward match", "backward_match"], ["partial match", "partial_match"], ["exact match", "exact_match"]] %></label>
+      <%= form.text_field :search_word, class: "search-word", placeholder: "kana, kanji, or english" %>
+      <%= form.submit "Search", class:"search-button" %>
+    <% end %>
   </div>
 </header>
 

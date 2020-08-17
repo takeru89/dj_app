@@ -1,5 +1,5 @@
 class WordsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show, :search]
   before_action :set_word, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -40,6 +40,12 @@ class WordsController < ApplicationController
       flash.now[:alert] = 'Delete Failed'
       render @word
     end
+  end
+
+  def search
+    method = params[:search_method]
+    @word = params[:search_word]
+    @words = Word.search(method, @word)
   end
 
   private
