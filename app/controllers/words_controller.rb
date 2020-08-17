@@ -39,6 +39,7 @@ class WordsController < ApplicationController
     else
       flash.now[:alert] = 'Delete Failed'
       render @word
+    end
   end
 
   private
