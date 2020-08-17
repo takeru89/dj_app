@@ -1,6 +1,6 @@
 class WordsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_word, only: [:show, :edit]
+  before_action :set_word, only: [:show, :edit, :update]
 
   def index
     @words = Word.includes(:user).order('created_at DESC').limit(200)
@@ -23,6 +23,14 @@ class WordsController < ApplicationController
   end
 
   def edit
+  end
+
+  def update
+    if @word.update(word_params)
+      redirect_to @word
+    else
+      render :edit
+    end
   end
 
   private
