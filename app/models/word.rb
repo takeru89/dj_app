@@ -18,16 +18,16 @@ class Word < ApplicationRecord
   validates :kanji, format: { with: KANJI_REGEX }, if: proc { |word| word.kanji.present? }
 
   def self.search(method, word)
-    if method == "forward_match"
-      @words = Word.where('kana LIKE(?) OR kanji LIKE(?) OR english LIKE(?)', "#{word}%", "#{word}%", "#{word}%")
-    elsif method == "backward_match"
-      @words = Word.where('kana LIKE(?) OR kanji LIKE(?) OR english LIKE(?)', "%#{word}", "%#{word}", "%#{word}")
-    elsif method == "partial_match"
-      @words = Word.where('kana LIKE(?) OR kanji LIKE(?) OR english LIKE(?)', "%#{word}%", "%#{word}%", "%#{word}%")
-    elsif method == "exact_match"
-      @words = Word.where('kana LIKE(?) OR kanji LIKE(?) OR english LIKE(?)', "#{word}", "#{word}", "#{word}")
-    else
-      @words = Word.all
-    end
+    @words = if method == 'forward_match'
+               Word.where('kana LIKE(?) OR kanji LIKE(?) OR english LIKE(?)', "#{word}%", "#{word}%", "#{word}%")
+             elsif method == 'backward_match'
+               Word.where('kana LIKE(?) OR kanji LIKE(?) OR english LIKE(?)', "%#{word}", "%#{word}", "%#{word}")
+             elsif method == 'partial_match'
+               Word.where('kana LIKE(?) OR kanji LIKE(?) OR english LIKE(?)', "%#{word}%", "%#{word}%", "%#{word}%")
+             elsif method == 'exact_match'
+               Word.where('kana LIKE(?) OR kanji LIKE(?) OR english LIKE(?)', word.to_s, word.to_s, word.to_s)
+             else
+               Word.all
+             end
   end
 end
