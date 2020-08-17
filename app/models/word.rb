@@ -16,4 +16,18 @@ class Word < ApplicationRecord
     validates :explanation, length: { maximum: 2000 }
   end
   validates :kanji, format: { with: KANJI_REGEX }, if: proc { |word| word.kanji.present? }
+
+  def self.search(method, word)
+    if method == "forward_match"
+      @words = Word.where('text LIKE?', "#{word}%")
+    elsif method == "backward_match"
+      @words = Word.where('text LIKE?', "%#{word}")
+    elsif method == "partial_match"
+      @words = Word.where('text LIKE?', "%#{word}%")
+    elsif method == "exact_match"
+      @words = Word.where('text LIKE?', "#{word}")
+    else
+      @words = Word.all
+    end
+  end
 end
