@@ -1,0 +1,32 @@
+<div class="search-results-wrap">
+  <div class="searching-word">
+    <div class="search-word-text">
+      results for "<%= @word %>"
+    </div>
+  </div>
+  <div class="wrap">
+  <% @words.each do |word| %>
+    <%= link_to word_path(word.id), class:"search-result-piece" do%>
+      <%# <div class="search-result-piece"> %>
+        <div class="japanese">
+          <div class="search-kana">
+            <%= word.kana %>
+          </div>
+          <% if word.kanji.present? %>
+            <div class="search-kanji">
+              <%= word.kanji %>
+            </div>
+          <% else %>
+            <div class="search-kanji">
+              ---
+            </div>
+          <% end %>
+        </div>
+        <div class="search-english">
+          <%= word.english %>
+        </div>   
+    <% end %>
+    <div class="author">by <%= word.user.nickname %></div>
+  <% end %>
+  </div>
+</div>

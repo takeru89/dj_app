@@ -19,13 +19,13 @@ class Word < ApplicationRecord
 
   def self.search(method, word)
     if method == "forward_match"
-      @words = Word.where('text LIKE?', "#{word}%")
+      @words = Word.where('kana LIKE(?) OR kanji LIKE(?) OR english LIKE(?)', "#{word}%", "#{word}%", "#{word}%")
     elsif method == "backward_match"
-      @words = Word.where('text LIKE?', "%#{word}")
+      @words = Word.where('kana LIKE(?) OR kanji LIKE(?) OR english LIKE(?)', "%#{word}", "%#{word}", "%#{word}")
     elsif method == "partial_match"
-      @words = Word.where('text LIKE?', "%#{word}%")
+      @words = Word.where('kana LIKE(?) OR kanji LIKE(?) OR english LIKE(?)', "%#{word}%", "%#{word}%", "%#{word}%")
     elsif method == "exact_match"
-      @words = Word.where('text LIKE?', "#{word}")
+      @words = Word.where('kana LIKE(?) OR kanji LIKE(?) OR english LIKE(?)', "#{word}", "#{word}", "#{word}")
     else
       @words = Word.all
     end

@@ -20,8 +20,8 @@
   </div>
   <div class="header-lower">
     <%= form_with(url: search_words_path, local: true, method: :get, class:"search-form") do |form| %>
-      <%= form.select :search_method, [["forward match", "forward_match"], ["backward match", "backward_match"], ["partial match", "partial_match"], ["exact match", "exact_match"]], class: "search-filtering" %>
-      <%= form.text_field :search_word, class: "search-word" %>
+      <label class="search-filtering"><%= form.select :search_method, [["forward match", "forward_match"], ["backward match", "backward_match"], ["partial match", "partial_match"], ["exact match", "exact_match"]] %></label>
+      <%= form.text_field :search_word, class: "search-word", placeholder: "kana, kanji, or english" %>
       <%= form.submit "Search", class:"search-button" %>
     <% end %>
   </div>
