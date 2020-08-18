@@ -21,19 +21,19 @@ class WordsController < ApplicationController
   end
 
   def show
-    if request.referer.include?('/users/')
-      @delete_path = myword_destroy_word_path(@word.id)
-    else
-      @delete_path = word_path(@word.id)
-    end
+    @delete_path = if request.referer.include?('/users/')
+                     myword_destroy_word_path(@word.id)
+                   else
+                     word_path(@word.id)
+                   end
   end
 
   def edit
-    if request.referer.include?('/users/')
-      @path = myword_update_word_path(@word.id)
-    else
-      @path = word_path(@word.id)
-    end
+    @path = if request.referer.include?('/users/')
+              myword_update_word_path(@word.id)
+            else
+              word_path(@word.id)
+            end
   end
 
   def update
