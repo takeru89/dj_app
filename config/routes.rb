@@ -6,5 +6,11 @@ Rails.application.routes.draw do
     collection do
       get 'search'
     end
+    member do
+      patch 'myword_update'
+      put 'myword_update'
+      delete 'myword_destroy'
+    end
   end
+  resources :users, only: :show
 end
