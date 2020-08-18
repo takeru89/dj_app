@@ -1,32 +1,4 @@
-<header>
-  <div class="header-upper">
-    <div class="heading">
-      <h1 class="app-name">Dict Japonicus</h1>
-    </div>
-    <div class="navbar">
-      <% if user_signed_in? %>
-        <ul class="nav-lists">
-          <li><%= link_to "MyPage", user_path(current_user.id), class: "nav-piece" %></li>
-          <li><%= link_to "Post", new_word_path, class: "nav-piece" %></li>
-          <li><%= link_to current_user.nickname, "#", class: "nav-piece" %></li>
-          <li><%= button_to "Logout", destroy_user_session_path, method: :delete, class: "nav-piece" %></li>
-        </ul>
-      <% else %>
-        <ul class="nav-lists">
-          <li><%= button_to "Login", new_user_session_path, method: :get, class: "nav-piece" %></li>
-          <li><%= button_to "Sign Up", new_user_registration_path, method: :get, class: "nav-piece" %></li>
-        </ul>
-      <% end %>
-    </div>
-  </div>
-  <div class="header-lower">
-    <%= form_with(url: search_words_path, local: true, method: :get, class:"search-form") do |form| %>
-      <label class="search-filtering"><%= form.select :search_method, [["forward match", "forward_match"], ["backward match", "backward_match"], ["partial match", "partial_match"], ["exact match", "exact_match"]] %></label>
-      <%= form.text_field :search_word, class: "search-word", placeholder: "kana, kanji, or english" %>
-      <%= form.submit "Search", class:"search-button" %>
-    <% end %>
-  </div>
-</header>
+
 
 <script>
 	$(document).ready(function(){
