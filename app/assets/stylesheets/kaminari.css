@@ -1,0 +1,27 @@
+.pagination {
+  text-align: center;
+  margin: 30px 0 100px;
+}
+
+.kaminari-text, .page {
+  color: #003366;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.last {
+  margin-left: 2px;
+}
+
+.next {
+  margin-left: 10px;
+}
+
+.prev {
+  margin-right: 10px;
+}
+
+.first {
+  margin-right: 2px;
+}
+

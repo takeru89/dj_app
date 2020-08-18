@@ -56,7 +56,7 @@ class WordsController < ApplicationController
   def search
     method = params[:search_method]
     @word = params[:search_word]
-    @words = Word.search(method, @word)
+    @words = Word.search(method, @word).page(params[:page]).per(10)
   end
 
   def myword_update
