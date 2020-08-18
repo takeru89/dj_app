@@ -1,7 +1,7 @@
 class WordsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show, :search]
   before_action :set_word, only: [:show, :edit, :update, :destroy,
-                                  :from_mypage_edit, :from_mypage_update, :from_mypage_destroy]
+                                  :myword_update, :myword_destroy]
 
   def index
     @words = Word.includes(:user).order('created_at DESC').limit(200)
@@ -21,9 +21,19 @@ class WordsController < ApplicationController
   end
 
   def show
+    if request.referer.include?('/users/')
+      @delete_path = myword_destroy_word_path(@word.id)
+    else
+      @delete_path = word_path(@word.id)
+    end
   end
 
   def edit
+    if request.referer.include?('/users/')
+      @path = myword_update_word_path(@word.id)
+    else
+      @path = word_path(@word.id)
+    end
   end
 
   def update
@@ -49,10 +59,7 @@ class WordsController < ApplicationController
     @words = Word.search(method, @word)
   end
 
-  def from_mypage_edit
-  end
-
-  def from_mypage_update
+  def myword_update
     if @word.update(word_params)
       redirect_to user_path(@word.user_id)
     else
@@ -60,7 +67,7 @@ class WordsController < ApplicationController
     end
   end
 
-  def from_mypage_destroy
+  def myword_destroy
     if @word.destroy
       redirect_to user_path(@word.user_id)
     else

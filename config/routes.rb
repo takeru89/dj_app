@@ -7,10 +7,9 @@ Rails.application.routes.draw do
       get 'search'
     end
     member do
-      get 'from_mypage_edit'
-      patch 'from_mypage_update'
-      put 'from_mypage_update'
-      delete 'from_mypage_destroy'
+      patch 'myword_update'
+      put 'myword_update'
+      delete 'myword_destroy'
     end
   end
   resources :users, only: :show
