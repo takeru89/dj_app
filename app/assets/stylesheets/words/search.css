@@ -50,9 +50,26 @@
   border-left: 2px solid black;
 }
 
-.author {
+.below-word-piece {
+  height: 30px;
   width: 100%;
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-star {
+  padding-top: 2px;
+}
+
+.below-word-piece img.star-button {
+  width: 20px;
+  height: 20px;
+}
+
+.author {
+  padding: 0 5px;
   text-align: end;
   vertical-align: top;
-  margin-bottom: 20px;
 }

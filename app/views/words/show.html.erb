@@ -4,8 +4,8 @@
       <div class="info-header-text">
         <%= @word.kana %>
       </div>
-      <div class="info-edit-button">
-        <%= render partial: 'favorites/favorite' %>
+      <div class="info-edit-button" id="shs">
+        <%= render partial: 'favorites/favorite' , locals: { word: @word }%>
         <div><%= link_to image_tag('edit_button.png', class:"edit-button"), edit_word_path(@word.id) %></div>
         <div><%= link_to image_tag('delete_button.png', class:"edit-button"), @delete_path, method: :delete, data: {confirm: "Do you really want to delete this word-info?"} %></div>
       </div>
