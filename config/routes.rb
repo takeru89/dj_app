@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       put 'myword_update'
       delete 'myword_destroy'
     end
+    resources :favorites, only: [:index, :create, :destroy]
   end
   resources :users, only: :show
 end
