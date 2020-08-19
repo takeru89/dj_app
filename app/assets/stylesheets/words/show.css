@@ -16,10 +16,15 @@
   font-weight: bold;
 }
 
-img.edit-button {
+.info-edit-button {
+  display: flex;
+  justify-content: end;
+}
+
+img.edit-button, .star-button {
   width: 30px;
   height: 30px;
-  text-decoration:none;
+  margin-left: 5px;
 }
 
 /* word contents */

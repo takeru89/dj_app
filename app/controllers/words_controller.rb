@@ -21,6 +21,7 @@ class WordsController < ApplicationController
   end
 
   def show
+    @favorite = Favorite.find_by(word_id: @word.id)
     @delete_path = if request.referer.include?('/users/')
                      myword_destroy_word_path(@word.id)
                    else

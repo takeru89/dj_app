@@ -10,7 +10,8 @@ class FavoritesController < ApplicationController
   end
 
   def destroy
-    @favorite = Favorite.find(params[:id])
+    @word = Word.find(params[:word_id])
+    @favorite = Favorite.find_by(word_id: @word.id)
     @favorite.destroy
   end
 end

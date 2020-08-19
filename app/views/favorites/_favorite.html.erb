@@ -1,0 +1,7 @@
+<div id="star-<%= @word.id%>">
+  <% if Favorite.find_by(word_id: @word.id).present? %>
+    <%= link_to image_tag('star_checked.png', class:"star-button"), word_favorite_path(@word.id, @favorite.id), method: :delete, remote: true %>
+  <% else %>
+    <%= link_to image_tag('star_blank.png', class:"star-button"), word_favorites_path(@word.id), method: :post, remote: true %>
+  <% end %>
+</div>
