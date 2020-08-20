@@ -50,10 +50,18 @@
   text-align: end;
   padding-top: 3px;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.my-words-buttons img.star-button {
+  width: 20px;
+  height: 20px;
 }
 
 img.my-words-edit-button {
   width: 20px;
   height: 20px;
   text-decoration: none;
+  margin-left: 5px;
 }
