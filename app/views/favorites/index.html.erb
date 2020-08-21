@@ -3,12 +3,12 @@
     <div class="favorites-title">
       My Favorites
     </div>
+    <div class="reload-box"><%= link_to image_tag('reload_button.png', class:"reload-button"), reload_user_favorites_path(current_user.id) %></div>
   </div>
   <div class="wrap">
   <% @favorites.each do |word| %>
-    <%= link_to word_path(word.word.id), class:"favorites-piece" do%>
-      <%# <div class="search-result-piece"> %>
-        <div class="favorites-japanese">
+    <%= link_to word_path(word.word.id), class:"favorites-piece" do %> 
+        <div class="favorites-japanese" %>
           <div class="favorites-kana">
             <%= word.word.kana %>
           </div>
@@ -27,8 +27,8 @@
         </div>   
     <% end %>
     <div class="favorites-piece-below" id="ss">
-      <span class="favorites-piece-author">by <%= word.user.nickname %></span>
-      <div class="favorites-piece-star", id="star-<%= word.id %>">
+      <span class="favorites-piece-author">by <%= word.word.user.nickname %></span>
+      <div class="favorites-piece-star", id="star-<%= word.word.id %>">
       <%= render partial: 'favorites/favorite', locals: { word: word.word } %>
       </div>
     </div>

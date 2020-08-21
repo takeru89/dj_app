@@ -14,6 +14,10 @@ Rails.application.routes.draw do
     resources :favorites, only: [:create, :destroy]
   end
   resources :users, only: :show do
-    resources :favorites, only: [:index]
+    resources :favorites, only: [:index] do
+      collection do
+        get 'reload'
+      end
+    end
   end
 end

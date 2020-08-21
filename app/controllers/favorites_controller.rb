@@ -16,4 +16,8 @@ class FavoritesController < ApplicationController
     @favorite = Favorite.find_by(word_id: @word.id)
     @favorite.destroy
   end
+
+  def reload
+    redirect_to action: :index
+  end
 end
