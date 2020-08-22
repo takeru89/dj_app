@@ -1,1 +1,2 @@
 $("#star-<%= @word.id%>").html("<%= j(render partial: 'favorites/favorite', locals: { word: @word }) %>");
+$("#favorites-word-<%= @word.id %>").remove();
