@@ -6,16 +6,16 @@
     <div class="reload-box"><%= link_to image_tag('reload_button.png', class:"reload-button"), reload_user_favorites_path(current_user.id) %></div>
   </div>
   <div class="wrap">
-  <% @favorites.each do |word| %>
-    <div id="favorites-word-<%= word.word.id %>">
-      <%= link_to word_path(word.word.id), class:"favorites-piece" do %> 
+  <% @favorites.each do |favorite| %>
+    <div id="favorites-word-<%= favorite.word.id %>">
+      <%= link_to word_path(favorite.word.id), class:"favorites-piece" do %> 
           <div class="favorites-japanese" %>
             <div class="favorites-kana">
-              <%= word.word.kana %>
+              <%= favorite.word.kana %>
             </div>
-            <% if word.word.kanji.present? %>
+            <% if favorite.word.kanji.present? %>
               <div class="favorites-kanji">
-                <%= word.word.kanji %>
+                <%= favorite.word.kanji %>
               </div>
             <% else %>
               <div class="favorites-kanji">
@@ -24,13 +24,13 @@
             <% end %>
           </div>
           <div class="favorites-english">
-            <%= word.word.english %>
+            <%= favorite.word.english %>
           </div>   
       <% end %>
-      <div class="favorites-piece-below" id="ss">
-        <span class="favorites-piece-author">by <%= word.word.user.nickname %></span>
+      <div class="favorites-piece-below">
+        <span class="favorites-piece-author">by <%= favorite.word.user.nickname %></span>
         <div class="favorites-piece-star" >
-        <%= link_to image_tag('close_button.png', class:"star-button"), word_favorite_path(word.word.id, Favorite.find_by(word_id: word.word.id)), method: :delete, remote: true %>
+        <%= link_to image_tag('close_button.png', class:"star-button"), word_favorite_path(favorite.word.id, favorite.id), method: :delete, remote: true %>
         </div>
       </div>
     </div>
