@@ -18,10 +18,6 @@ class FavoritesController < ApplicationController
     @favorite.destroy
   end
 
-  def reload
-    redirect_to action: :index
-  end
-
   private
 
   def set_cache_buster
