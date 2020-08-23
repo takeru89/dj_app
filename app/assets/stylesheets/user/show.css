@@ -14,7 +14,7 @@
 }
 
 .my-words-header {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
 }
 
@@ -73,6 +73,7 @@ img.my-words-edit-button {
 /* ソート */
 .sort-form {
   display: flex;
+  align-items: center;
 }
 
 .sort-filtering {
@@ -97,12 +98,12 @@ img.my-words-edit-button {
   pointer-events: none; /* マウスイベントを制御する */
 }
 
-select {
+.sort-filtering select {
   -webkit-appearance: none;/* ベンダープレフィックス(Google Chrome、Safari用) */
   -moz-appearance: none; /* ベンダープレフィックス(Firefox用) */
   appearance: none; /* 標準のスタイルを無効にする */
   display: block; /* ブロックレベル要素化する */
-  height: 32px;
+  height: 26px;
   width: 150px; /* ボックスの高さを指定する */
   padding-left: 10px; /* ボックス内側の余白を指定する */
   color: #003366; /* フォントの色を指定 */
@@ -116,9 +117,7 @@ select {
 }
 
 .sort-button {
-  height: 36px;
-  color: white;
-  background-color: #003366;
-  border-radius: 5px;
+  height: 30px;
+  width: 30px;
   margin-left: 3px;
 }
