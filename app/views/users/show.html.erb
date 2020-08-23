@@ -3,6 +3,12 @@
     <div class="my-words-header">
       MyPosts
     </div>
+    <div class="sort-form">
+      <%= form_with(url: user_path(current_user.id), local: true, method: :get, class:"sort-form") do |form| %>
+        <label class="sort-filtering"><%= form.select :sort_method, [["Newest to Oldest", "sort_created_desc"], ["Oldest to Newest", "sort_created_asc"], ["あ to ん", "kana_asc"], ["ん to あ", "kana_desc"]] %></label>
+        <%= form.submit "Sort", class:"sort-button" %>
+      <% end %>
+    </div>
   </div>
   <div class="wrap">
   <% @words.each do |word| %>
