@@ -27,6 +27,7 @@
         </div>   
     <% end %>
     <div class="my-words-buttons">
+      <%= render partial: 'favorites/favorite', locals: { word: word } %>
       <%= link_to image_tag('edit_button.png', class:"my-words-edit-button"), edit_word_path(word.id) %>
       <%= link_to image_tag('delete_button.png', class:"my-words-edit-button"), myword_destroy_word_path(word.id), method: :delete, data: {confirm: "Do you really want to delete this word-info?"} %>
     </div>

@@ -24,9 +24,16 @@
         </div>
         <div class="search-english">
           <%= word.english %>
-        </div>   
+        </div>
     <% end %>
-    <div class="author">by <%= word.user.nickname %></div>
+    <div class="below-word-piece" id="ss">
+      <span class="author">by <%= word.user.nickname %></span>
+      <div class="search-star", id="star-<%= word.id %>">
+      <% if user_signed_in? %>
+      <%= render partial: 'favorites/favorite', locals: { word: word } %>
+      <% end %>
+      </div>
+    </div>
   <% end %>
   </div>
   <%= paginate @words%>

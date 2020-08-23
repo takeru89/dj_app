@@ -18,6 +18,7 @@
       <div class="navbar">
         <% if user_signed_in? %>
           <ul class="nav-lists">
+            <li><%= link_to "MyFavorites", user_favorites_path(current_user.id), class: "nav-piece" %></li>
             <li><%= link_to "MyPage", user_path(current_user.id), class: "nav-piece" %></li>
             <li><%= link_to "Post", new_word_path, class: "nav-piece" %></li>
             <li><%= link_to current_user.nickname, "#", class: "nav-piece" %></li>

@@ -1,27 +1,20 @@
-/* 検索結果一覧 */
-.search-results-wrap {
+.favorites-wrap {
   width: 60%;
   margin: 0 auto;
 }
 
-.searching-word {
+.favorites-header {
   width: 100%;
   margin: 50px auto;
-}
-
-.search-word::placeholder {
-  padding-left: 10px;
-}
-
-.search-word-text {
-  font-size: 20px;
-  font-weight: bold;
   border-bottom: 5px solid #003366;
-  margin: 0 auto;
 }
 
+.favorites-title {
+  font-size: 25px;
+  font-weight: bold;
+}
 
-.search-result-piece {
+.favorites-piece {
   width: 100%;
   margin: 0 auto;
   height: 50px;
@@ -33,24 +26,24 @@
   text-decoration: none;
 }
 
-.japanese {
+.favorites-japanese {
   width: 50%;
   display: flex;
   align-items: center;
 }
 
-.search-kana, .search-kanji {
+.favorites-kana, .favorites-kanji {
   width: 50%;
   padding-left: 20px;
 }
 
-.search-english {
+.favorites-english {
   width: 50%;
   padding-left: 20px;
   border-left: 2px solid black;
 }
 
-.below-word-piece {
+.favorites-piece-below {
   height: 30px;
   width: 100%;
   display:flex;
@@ -59,16 +52,16 @@
   margin-bottom: 20px;
 }
 
-.search-star {
+.favorites-piece-star {
   padding-top: 2px;
 }
 
-.below-word-piece img.star-button {
+.favorites-piece-below img.star-button {
   width: 20px;
   height: 20px;
 }
 
-.author {
+.favorites-piece-author {
   padding: 0 5px;
   text-align: end;
   vertical-align: top;

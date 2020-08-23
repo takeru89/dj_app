@@ -2,6 +2,8 @@ class WordsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show, :search]
   before_action :set_word, only: [:show, :edit, :update, :destroy,
                                   :myword_update, :myword_destroy]
+  before_action :set_cache_buster
+
 
   def index
     @words = Word.includes(:user).order('created_at DESC').limit(200)
@@ -21,6 +23,7 @@ class WordsController < ApplicationController
   end
 
   def show
+    @favorite = Favorite.find_by(word_id: @word.id)
     @delete_path = if request.referer.include?('/users/')
                      myword_destroy_word_path(@word.id)
                    else
@@ -84,5 +87,11 @@ class WordsController < ApplicationController
 
   def set_word
     @word = Word.find(params[:id])
+  end
+
+  def set_cache_buster
+    response.headers["Cache-Control"] = "no-cache, no-store, max-age=0, must-revalidate"
+    response.headers["Pragma"] = "no-cache"
+    response.headers["Expires"] = "Fri, 01 Jan 1990 00:00:00 GMT"
   end
 end

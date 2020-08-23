@@ -4,10 +4,15 @@
       <div class="info-header-text">
         <%= @word.kana %>
       </div>
-      <div class="info-edit-button">
-        <%= link_to image_tag('edit_button.png', class:"edit-button"), edit_word_path(@word.id) %>
-        <%= link_to image_tag('delete_button.png', class:"edit-button"), @delete_path, method: :delete, data: {confirm: "Do you really want to delete this word-info?"} %>
+      <% if user_signed_in? %>
+      <div class="info-edit-button" id="shs">
+        <%= render partial: 'favorites/favorite' , locals: { word: @word }%>
+        <% if @word.user_id == current_user.id %>
+          <div><%= link_to image_tag('edit_button.png', class:"edit-button"), edit_word_path(@word.id) %></div>
+          <div><%= link_to image_tag('delete_button.png', class:"edit-button"), @delete_path, method: :delete, data: {confirm: "Do you really want to delete this word-info?"} %></div>
+        <% end %>
       </div>
+      <% end %>
     </div>
   </div>
   <div class="info-upper">
