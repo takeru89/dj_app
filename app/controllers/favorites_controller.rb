@@ -3,7 +3,16 @@ class FavoritesController < ApplicationController
   before_action :set_cache_buster
 
   def index
-    @favorites = Favorite.where(user_id: current_user.id).includes(:word).page(params[:page]).per(10)
+    fav = Favorite.where(user_id: current_user.id).includes(:word)
+    if params[:sort_method] == "sort_created_asc"
+      @favorites = fav.order(created_at: "ASC").page(params[:page]).per(10)
+    elsif params[:sort_method] == "kana_asc"
+      @favorites = fav.order("words.kana ASC").page(params[:page]).per(10)
+    elsif params[:sort_method] == "kana_desc"
+      @favorites = fav.order("words.kana DESC").page(params[:page]).per(10)
+    else
+      @favorites = fav.order(created_at: "DESC").page(params[:page]).per(10)
+    end
   end
 
   def create
