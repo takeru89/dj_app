@@ -46,11 +46,11 @@ class FavoritesController < ApplicationController
 
   def send_favorites_csv(favorites)
     csv_data = CSV.generate do |csv|
-      header = %w(kana kanji english detail)
+      header = %w(kana kanji class english detail)
       csv << header
 
       favorites.each do |favorite|
-        values = [favorite.word.kana,favorite.word.kanji,favorite.word.english,favorite.word.explanation]
+        values = [favorite.word.kana,favorite.word.kanji,favorite.word.word_class.name,favorite.word.english,favorite.word.explanation]
         csv << values
       end
 

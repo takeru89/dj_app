@@ -17,6 +17,17 @@
   font-weight: bold;
 }
 
+.favorite-header-right {
+  display: flex;
+}
+
+img.csv-button {
+  height: 30px;
+  width: 30px;
+  display: block;
+  margin-right: 10px;
+}
+
 .favorites-piece {
   width: 100%;
   margin: 0 auto;
