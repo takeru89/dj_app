@@ -3,6 +3,12 @@
     <div class="favorites-title">
       My Favorites
     </div>
+    <div class="sort-form">
+      <%= form_with(url: user_favorites_path(current_user.id), local: true, method: :get, class:"sort-form") do |form| %>
+        <label class="sort-filtering"><%= form.select :sort_method, options_for_select([["Newest to Oldest", "sort_created_desc"], ["Oldest to Newest", "sort_created_asc"], ["あ to ん", "kana_asc"], ["ん to あ", "kana_desc"]], params[:sort_method]), class:"sort-select" %></label>
+        <%= image_submit_tag("sort_button.png", class:"sort-button") %>
+      <% end %>
+    </div>
   </div>
   <div class="wrap">
   <% @favorites.each do |favorite| %>
