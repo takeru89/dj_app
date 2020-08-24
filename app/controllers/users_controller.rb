@@ -4,7 +4,15 @@ class UsersController < ApplicationController
 
   def show
     @nickname = current_user.nickname
-    @words = current_user.words.page(params[:page]).per(10)
+    if params[:sort_method] == "sort_created_asc"
+      @words = current_user.words.order(created_at: "ASC").page(params[:page]).per(10)
+    elsif params[:sort_method] == "kana_asc"
+      @words = current_user.words.order(kana: "ASC").page(params[:page]).per(10)
+    elsif params[:sort_method] == "kana_desc"
+      @words = current_user.words.order(kana: "DESC").page(params[:page]).per(10)
+    else
+      @words = current_user.words.order(created_at: "DESC").page(params[:page]).per(10)
+    end
   end
 
   private

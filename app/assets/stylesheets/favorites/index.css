@@ -7,6 +7,9 @@
   width: 100%;
   margin: 50px auto;
   border-bottom: 5px solid #003366;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .favorites-title {
@@ -65,4 +68,56 @@
   padding: 0 5px;
   text-align: end;
   vertical-align: top;
+}
+
+/* ソート */
+.sort-form {
+  display: flex;
+  align-items: center;
+}
+
+.sort-filtering {
+  position: relative; /* 選択ボックスの位置指定 */
+  display: block; /* ブロックレベル要素化にする */
+  width: 150px; /* ボックスの高さを指定する */
+  border: 2px solid #003366;/* ボックスの境界線を実線で指定する */
+  border-radius: 5px; /* ボックスに角丸を指定する */
+}
+  
+.sort-filtering:before {
+  position: absolute; /* 矢印の位置を指定する */
+  content: ""; /* 矢印のコンテンツ */
+  top: 50%; /* 下部から配置の基準位置を決める */
+  right: 10px; /* 右側から配置の基準位置を決める */
+  width:0px; /* ボックスの横幅をなしに指定する */
+  height:0px; /* ボックスの高さをなしに指定する */
+  margin: -2px 0 0 0; /* ボックス外側の余白を指定する */
+  border: 5px solid transparent; /* 矢印の境界線を透過する */
+  border-top: 5px solid #003366; /* 矢印ボックス上部の境界線を実線で指定する */
+  cursor: pointer; /* マウスカーソルの形を指定する */
+  pointer-events: none; /* マウスイベントを制御する */
+}
+
+.sort-filtering select {
+  -webkit-appearance: none;/* ベンダープレフィックス(Google Chrome、Safari用) */
+  -moz-appearance: none; /* ベンダープレフィックス(Firefox用) */
+  appearance: none; /* 標準のスタイルを無効にする */
+  display: block; /* ブロックレベル要素化する */
+  height: 26px;
+  width: 150px; /* ボックスの高さを指定する */
+  padding-left: 10px; /* ボックス内側の余白を指定する */
+  color: #003366; /* フォントの色を指定 */
+  border: none; /* 境界線をなしに指定する */
+  border-radius: 5px; /* 角丸を指定する */
+  background: transparent;/* 背景を透過指定する */
+}
+
+::-ms-expand { /* select要素のデザインを無効にする（IE用） */
+  display: none;
+}
+
+.sort-button {
+  height: 30px;
+  width: 30px;
+  margin-left: 3px;
 }
