@@ -9,13 +9,91 @@
 
 }
 
-
 .tagcloud-piece {
-  color: black;
+  color: rgb(31, 30, 30);
   font-size: 15px;
   font-weight: bold;
   text-decoration: none;
-  background: -webkit-linear-gradient(0deg, blue, #15b610, rgb(247, 183, 5));
+  /* background: -webkit-linear-gradient(0deg, blue, #15b610, rgb(247, 183, 5));
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
+}
+
+.about {
+background-color: #003366;
+padding-bottom: 10px;
+}
+
+.about-contents {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.info-left {
+  width: 40%;
+  font-size: 20px;
+  text-align: justify;
+  line-height: 30px;
+  color: white;
+  word-break: normal;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.info-title {
+  font-size: 35px;
+  font-style: italic;
+}
+
+.info-right {
+  width: 40%;
+  font-size: 20px;
+  text-align: justify;
+  line-height: 30px;
+  color: white;
+  word-break: normal;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.member-buttons {
+  margin-bottom: 50px;
+}
+
+.register-link-button {
+  width:  300px;
+  color: #003366;
+  font-weight: bold;
+  text-align: center;
+  background-color: greenyellow;
+  border-top: 2px solid gray;
+  border-left: 2px solid gray;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  display: block;
+  margin: 50px auto 0;
+}
+
+.login-link-button {
+  width:  200px;
+  color: #003366;
+  font-weight: bold;
+  text-align: center;
+  background-color: white;
+  border-top: 2px solid gray;
+  border-left: 2px solid gray;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 5px;
+  padding: 9px;
+  display: block;
+  margin: 30px auto 0;
+}
+
+.top-copyright {
+  color: #003366;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
 }
