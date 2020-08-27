@@ -1,7 +1,6 @@
 /* ヘッダー上部 */
 .header-upper {
   height: 80px;
-  min-width: 700px;
   background-color: #003366;
   display: flex;
   align-items: center;
@@ -102,8 +101,6 @@
 
 /* 検索フォーム */
 .header-lower {
-  min-width: 700px;
-
 }
 
 .search-form {

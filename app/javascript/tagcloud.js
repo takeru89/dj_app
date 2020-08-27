@@ -10,30 +10,60 @@
 		speedY : null,
 		tLength : null
 	}
-	var settings = {
-		//height of sphere container
-		height : 700,
-		//width of sphere container
-		width : 700,
-		//radius of sphere
-		radius : 230,
-		//rotation speed
-		speed : 0.2,
-		//sphere rotations slower
-		slower : 0.9,
-		//delay between update position
-		timer : 5,
-		//dependence of a font size on axis Z
-		fontMultiplier : 15,
-		//tag css stylies on mouse over
-		hoverStyle : {
-			// border : '1px solid #935C26',
-			// color : '#935C26'
-		},
-		//tag css stylies on mouse out
-		mouseOutStyle : {
-			// border : 'none',
-			// color : 'red'
+
+	if (window.matchMedia('(max-width:500px)').matches) {
+		var settings = {
+			//height of sphere container
+			height : 300,
+			//width of sphere container
+			width : 300,
+			//radius of sphere
+			radius : 110,
+			//rotation speed
+			speed : 0.2,
+			//sphere rotations slower
+			slower : 0.9,
+			//delay between update position
+			timer : 5,
+			//dependence of a font size on axis Z
+			fontMultiplier : 10,
+			//tag css stylies on mouse over
+			hoverStyle : {
+				// border : '1px solid #935C26',
+				// color : '#935C26'
+			},
+			//tag css stylies on mouse out
+			mouseOutStyle : {
+				// border : 'none',
+				// color : 'red'
+			}
+		}
+	} else if (window.matchMedia('(min-width:500px)').matches) {
+		var settings = {
+			//height of sphere container
+			height : 700,
+			//width of sphere container
+			width : 700,
+			//radius of sphere
+			radius : 230,
+			//rotation speed
+			speed : 0.2,
+			//sphere rotations slower
+			slower : 0.9,
+			//delay between update position
+			timer : 5,
+			//dependence of a font size on axis Z
+			fontMultiplier : 15,
+			//tag css stylies on mouse over
+			hoverStyle : {
+				// border : '1px solid #935C26',
+				// color : '#935C26'
+			},
+			//tag css stylies on mouse out
+			mouseOutStyle : {
+				// border : 'none',
+				// color : 'red'
+			}
 		}
 	}
 

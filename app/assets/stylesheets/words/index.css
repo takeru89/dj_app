@@ -1,12 +1,10 @@
 /* tag cloud */
 .tag-cloud-wrap {
-  min-width: 700px;
   display: flex;
   justify-content: center;
 }
 
 .tag-cloud{
-
 }
 
 .tagcloud-piece {
@@ -23,7 +21,7 @@
 .about {
   background-color: #003366;
   padding: 30px 0;
-  min-width: 700px;
+  /* min-width: 700px; */
 }
 
 .about-box {
@@ -84,6 +82,14 @@
 }
 
 @media (max-width: 500px) {
+  .tag-cloud {
+    margin: 15px 0;
+  }
+
+  .tagcloud-piece {
+    font-size: 10px;
+  }
+
   .info-contents {
     width: 80%;
     margin-bottom: 30px; 
@@ -98,7 +104,6 @@
 .top-info {
   background-color: #003366;
   padding: 30px 0;
-  min-width: 700px;
 }
 
 .top-info-box {
