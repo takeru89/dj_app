@@ -1,7 +1,7 @@
 .word-info {
   width: 70%;
   min-width: 700px;
-  margin: 50px auto 0;
+  margin: 50px auto 100px;
 }
 
 /* word heading */
@@ -101,7 +101,10 @@ img.info-img-content {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 500px)
+ {.word-info {
+  min-width: 380px;
+ }
   .info-basic-box {
     width: 100%;
   }

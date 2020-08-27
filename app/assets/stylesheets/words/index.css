@@ -83,20 +83,6 @@
   margin: 30px auto 0;
 }
 
-footer {
-  height:30px;
-  min-width: 700px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.top-copyright {
-  color: #003366;
-  font-size: 13px;
-  font-weight: bold;
-}
-
 @media (max-width: 500px) {
   .info-contents {
     width: 80%;
