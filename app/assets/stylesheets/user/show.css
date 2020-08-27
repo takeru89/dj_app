@@ -1,6 +1,7 @@
 /* 検索結果一覧 */
 .my-posts-wrap {
   width: 60%;
+  min-width: 700px;
   margin: 0 auto;
 }
 
@@ -18,6 +19,9 @@
   font-weight: bold;
 }
 
+.my-words-list {
+  margin: 0 auto;
+}
 
 .my-words-piece {
   width: 100%;
@@ -79,7 +83,7 @@ img.my-words-edit-button {
 .sort-filtering {
   position: relative; /* 選択ボックスの位置指定 */
   display: block; /* ブロックレベル要素化にする */
-  width: 150px; /* ボックスの高さを指定する */
+  width: 180px; /* ボックスの高さを指定する */
   border: 2px solid #003366;/* ボックスの境界線を実線で指定する */
   border-radius: 5px; /* ボックスに角丸を指定する */
 }
@@ -104,7 +108,7 @@ img.my-words-edit-button {
   appearance: none; /* 標準のスタイルを無効にする */
   display: block; /* ブロックレベル要素化する */
   height: 26px;
-  width: 150px; /* ボックスの高さを指定する */
+  width: 180px; /* ボックスの高さを指定する */
   padding-left: 10px; /* ボックス内側の余白を指定する */
   color: #003366; /* フォントの色を指定 */
   border: none; /* 境界線をなしに指定する */
@@ -120,4 +124,15 @@ img.my-words-edit-button {
   height: 30px;
   width: 30px;
   margin-left: 3px;
+}
+
+/* responsive */
+@media (max-width: 1000px) {
+  .my-words {
+    width:85%;
+  }
+
+  .my-words-list {
+    width:85%;
+  }
 }

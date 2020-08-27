@@ -49,13 +49,9 @@
     <% end %>
   </div>
   <div class="info-lower">
-    <table class="info-details-table">
-      <tr>
-        <td class="info-table-details">details:</td>
-      </tr>
-      <tr>
-        <td class="info-details-box"><%= simple_format(@word.explanation) %></td>
-      </tr>
-    </table>
+    <div class="info-details-wrap">
+      <div class="info-table-details">details:</div>
+      <div class="info-details-box"><%= simple_format(@word.explanation) %></div>
+    </div>
   </div>
 </div>

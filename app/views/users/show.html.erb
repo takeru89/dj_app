@@ -12,34 +12,34 @@
       <% end %>
     </div>
   </div>
-  <div class="wrap">
-  <% @words.each do |word| %>
-    <%= link_to word_path(word.id), class:"my-words-piece" do%>
-      <%# <div class="search-result-piece"> %>
-        <div class="my-words-japanese">
-          <div class="my-words-kana">
-            <%= word.kana %>
+  <div class="my-words-list">
+    <% @words.each do |word| %>
+      <%= link_to word_path(word.id), class:"my-words-piece" do%>
+        <%# <div class="search-result-piece"> %>
+          <div class="my-words-japanese">
+            <div class="my-words-kana">
+              <%= word.kana %>
+            </div>
+            <% if word.kanji.present? %>
+              <div class="my-words-kanji">
+                <%= word.kanji %>
+              </div>
+            <% else %>
+              <div class="my-words-kanji">
+                ---
+              </div>
+            <% end %>
           </div>
-          <% if word.kanji.present? %>
-            <div class="my-words-kanji">
-              <%= word.kanji %>
-            </div>
-          <% else %>
-            <div class="my-words-kanji">
-              ---
-            </div>
-          <% end %>
-        </div>
-        <div class="my-words-english">
-          <%= word.english %>
-        </div>   
+          <div class="my-words-english">
+            <%= word.english %>
+          </div>   
+      <% end %>
+      <div class="my-words-buttons">
+        <%= render partial: 'favorites/favorite', locals: { word: word } %>
+        <%= link_to image_tag('edit_button.png', class:"my-words-edit-button"), edit_word_path(word.id) %>
+        <%= link_to image_tag('delete_button.png', class:"my-words-edit-button"), myword_destroy_word_path(word.id), method: :delete, data: {confirm: "Do you really want to delete this word-info?"} %>
+      </div>
     <% end %>
-    <div class="my-words-buttons">
-      <%= render partial: 'favorites/favorite', locals: { word: word } %>
-      <%= link_to image_tag('edit_button.png', class:"my-words-edit-button"), edit_word_path(word.id) %>
-      <%= link_to image_tag('delete_button.png', class:"my-words-edit-button"), myword_destroy_word_path(word.id), method: :delete, data: {confirm: "Do you really want to delete this word-info?"} %>
-    </div>
-  <% end %>
   </div>
   <%= paginate @words%>
 </div>

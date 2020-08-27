@@ -23,28 +23,47 @@
   </div>
 </div>
 
-<div class="about">
-  <div class="about-contents">
-    <p class="info-left">
-      <span class="info-title">About DJ</span><br>
+<% if user_signed_in? %>
+  <div class="top-info">
+    <div class="top-info-box">
+      <div class="request-words">
+        <p class="request-title">Requested Words</p>
+        <div class="request-contents">
+        </div>
+
+      </div>
+      <div class="pick-up">
+        <p class="pick-up-title">Pick Up</p>
+        <div class="pick-up-contents">
+        </div>
+        
+      </div>
+    </div>
+  </div>
+<%else%>
+  <div class="about">
+    <div class="about-box">
+      <p class="info-contents">
+        <span class="info-title">About DJ</span><br>
         Dict Japonicus is a user-generated dictionary app that helps users find a way of learning the use of Japanese vocabularies.<br>
         This app aims to provide both learners and teachers with a tool of sharing their methods of understanding, searching, and teaching vocabularies.<br>
         If you are looking for a Japanese dictionary where you can find practical meanings of words and share your way of learning words, why don’t you join us?
-    </p>
-    <p class="info-right">
-      <span class="info-title">Be one of us!</span><br>
+      </p>
+      <p class="info-contents">
+        <span class="info-title">Be one of us!</span><br>
         If you want to use this app not only for searching words but for actively taking part in the development of this dictionary, be a member and enjoy the full functions of this app.<br><br>
         Members can: <br>
         ・post word information pages and edit them<br>
         ・make a favorite-word list and export it as a csv file<br>
         ・make a request for words you want to learn
-    </p>
+      </p>
+    </div>
+    <div class="member-buttons">
+      <%= link_to "Sign Up", new_user_registration_path, method: :get, class:"register-link-button"%>
+      <%= link_to "Login", new_user_session_path, method: :get, class:"login-link-button"%>
+    </div>
   </div>
-  <div class="member-buttons">
-    <%= link_to "Sign Up", new_user_registration_path, method: :get, class:"register-link-button"%>
-    <%= link_to "Login", new_user_session_path, method: :get, class:"login-link-button"%>
-  </div>
-</div>
+<% end %>
 
 <footer>
   <p class="top-copyright">©️ 2020 Takeru Sada</p>

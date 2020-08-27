@@ -1,4 +1,8 @@
 /* フォーム全体 */
+.edit-wrap {
+  min-width: 700px;
+}
+
 .word-edit {
   width: 50%;
   margin: 50px auto;
@@ -7,6 +11,7 @@
 
 .edit-header-text {
   font-size: 20px;
+  font-weight: bold;
   color: #003366;
   border-bottom: 4px solid #003366;
   margin: 0 auto;
@@ -62,10 +67,9 @@
 
 /* 投稿ボタン */
 .edit {
-  width: 180px;
-  margin: 20px auto 0;
+  min-width: 700px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
@@ -76,6 +80,7 @@
   font-weight: bold;
   background-color: #003366;
   border-radius: 5px;
+  margin-right: 10px;
 }
 
 .cancel-button {
@@ -91,6 +96,17 @@
   text-decoration: none;
   text-align: center;
   line-height: 27px;
+  margin-left: 10px;
 }
 
+@media (max-width: 1100px) {
+  .word-edit {
+    width:70%;
+  }
+}
 
+@media (max-width: 500px) {
+  .word-edit {
+    width:80%;
+  }
+}

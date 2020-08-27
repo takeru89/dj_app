@@ -1,5 +1,6 @@
 .favorites-wrap {
   width: 60%;
+  min-width: 700px;
   margin: 0 auto;
 }
 
@@ -26,6 +27,10 @@ img.csv-button {
   width: 30px;
   display: block;
   margin-right: 10px;
+}
+
+.favorites-list {
+  margin: 0 auto;
 }
 
 .favorites-piece {
@@ -131,4 +136,15 @@ img.csv-button {
   height: 30px;
   width: 30px;
   margin-left: 3px;
+}
+
+/* responsive */
+@media (max-width: 1000px) {
+  .favorites-header {
+    width:85%;
+  }
+
+  .favorites-list {
+    width:85%;
+  }
 }

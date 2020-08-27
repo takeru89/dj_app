@@ -53,17 +53,17 @@
 
 .header-right-lists li .sub-my-page {
   position: absolute;
-  left: -121px;
+  left: -81px;
 }
 
 .header-right-lists li .sub-out {
   position: absolute;
-  left: -76px;
+  left: -36px;
 }
 
 .header-right-lists li .sub-in {
   position: absolute;
-  left: -83px;
+  left: -43px;
 }
 
 .header-right-lists li ul li {
@@ -117,7 +117,7 @@
 .search-filtering {
   position: relative; /* 選択ボックスの位置指定 */
   display: block; /* ブロックレベル要素化にする */
-  width: 150px; /* ボックスの高さを指定する */
+  width: 190px; /* ボックスの高さを指定する */
   border: 2px solid #003366;/* ボックスの境界線を実線で指定する */
   border-radius: 5px; /* ボックスに角丸を指定する */
 }
@@ -136,13 +136,13 @@
   pointer-events: none; /* マウスイベントを制御する */
 }
 
-select {
+.search-filtering select {
   -webkit-appearance: none;/* ベンダープレフィックス(Google Chrome、Safari用) */
   -moz-appearance: none; /* ベンダープレフィックス(Firefox用) */
   appearance: none; /* 標準のスタイルを無効にする */
   display: block; /* ブロックレベル要素化する */
   height: 32px;
-  width: 150px; /* ボックスの高さを指定する */
+  width: 190px; /* ボックスの高さを指定する */
   padding-left: 10px; /* ボックス内側の余白を指定する */
   color: #003366; /* フォントの色を指定 */
   border: none; /* 境界線をなしに指定する */
@@ -153,10 +153,10 @@ select {
 ::-ms-expand { /* select要素のデザインを無効にする（IE用） */
   display: none;
 }
-/* 検索条件 */
 
+/* 検索条件 */
 .search-word{
-  height: 30px;
+  height: 32px;
   width: 300px;
   border: 2px solid #003366;
   border-radius: 5px;

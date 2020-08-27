@@ -1,5 +1,6 @@
 .word-info {
   width: 70%;
+  min-width: 700px;
   margin: 50px auto 0;
 }
 
@@ -36,6 +37,7 @@ img.edit-button {
 .info-upper {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 40px;
 }
 
@@ -45,7 +47,7 @@ img.edit-button {
 
 .info-basic-table {
   width: 100%;
-  height: 30vh;
+  height: 300px;
 }
 
 .info-table-left {
@@ -68,17 +70,14 @@ img.edit-button {
 
 img.info-img-content {
   width: 100%;
-  height: 45vh;
+  height: 250px;
   border-radius: 5px;
+  object-fit: contain;
 }
 
 /* details */
 .info-lower {
   margin-top: 30px;
-}
-
-.info-details-table {
-  width: 100%;
 }
 
 .info-table-details {
@@ -87,10 +86,23 @@ img.info-img-content {
 }
 
 .info-details-box {
-  width: 100%;
   border: 2px solid black;
   border-radius: 5px;
   vertical-align: text-top;
   padding: 0 10px;
   font-size: 15px;
+}
+
+/* responsive */
+@media (max-width: 1000px) {
+  .info-header, .info-upper, .info-lower {
+    width:85%;
+    margin: 50px auto 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .info-basic-box {
+    width: 100%;
+  }
 }
