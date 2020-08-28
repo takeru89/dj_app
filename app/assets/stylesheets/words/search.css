@@ -9,12 +9,10 @@
   margin: 50px auto;
 }
 
-.search-word::placeholder {
-  padding-left: 10px;
-}
+
 
 .search-word-text {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
   border-bottom: 5px solid #003366;
   margin: 0 auto;
@@ -24,7 +22,7 @@
 .search-result-piece {
   width: 100%;
   margin: 0 auto;
-  height: 50px;
+  min-height: 50px;
   display: flex;
   align-items: center;
   border: 2px solid black;
@@ -72,4 +70,58 @@
   padding: 0 5px;
   text-align: end;
   vertical-align: top;
+}
+
+@media (max-width: 500px) {
+  .search-results-wrap {
+    width: 85%;
+  }
+
+  .searching-word {
+    width: 100%;
+    margin: 30px auto 47px;
+  }
+
+  .search-word-text {
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 5px solid #003366;
+    margin: 0 auto;
+  }
+
+  .search-result-piece {
+    font-size: 10px;
+    min-height: 30px;
+    display: flex;
+  }
+
+  .japanese {
+    width: 50%;
+    display: block;
+  }
+
+  .search-kana, .search-kanji {
+    width: 100%;
+  }
+
+  .search-kana, .search-kanji, .search-english{
+    padding-left: 10px;
+  }
+
+  .author {
+    font-size: 12px;
+    padding: 0 5px;
+    text-align: end;
+    vertical-align: top;
+  }
+
+  .below-word-piece img.star-button {
+    width: 15px;
+    height: 15px;
+  }
+
+  .below-word-piece {
+    height: 20px;
+    margin-bottom: 10px;
+  }
 }

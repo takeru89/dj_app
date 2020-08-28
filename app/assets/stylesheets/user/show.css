@@ -1,7 +1,6 @@
 /* 検索結果一覧 */
 .my-posts-wrap {
   width: 60%;
-  min-width: 700px;
   margin: 0 auto 100px;
 }
 
@@ -25,8 +24,8 @@
 
 .my-words-piece {
   width: 100%;
-  margin: 0 auto;
-  height: 50px;
+  /* margin: 0 auto; */
+  min-height: 50px;
   display: flex;
   align-items: center;
   border: 2px solid black;
@@ -56,7 +55,7 @@
   height: 27px;
   text-align: end;
   padding-top: 3px;
-  margin-bottom: 20px;
+  margin-bottom: 23px;
   display: flex;
   justify-content: flex-end;
 }
@@ -108,7 +107,7 @@ img.my-words-edit-button {
   appearance: none; /* 標準のスタイルを無効にする */
   display: block; /* ブロックレベル要素化する */
   height: 26px;
-  width: 180px; /* ボックスの高さを指定する */
+  width: 177px; /* ボックスの高さを指定する */
   padding-left: 10px; /* ボックス内側の余白を指定する */
   color: #003366; /* フォントの色を指定 */
   border: none; /* 境界線をなしに指定する */
@@ -126,13 +125,85 @@ img.my-words-edit-button {
   margin-left: 3px;
 }
 
+
 /* responsive */
 @media (max-width: 1000px) {
+  .my-posts-wrap {
+    width: 85%;
+  }
+}
+
+@media (max-width: 500px) {
   .my-words {
-    width:85%;
+    margin: 30px auto;
+    border-bottom: none;
+    display: block;
   }
 
-  .my-words-list {
-    width:85%;
+  .my-words-header {
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 5px solid #003366;
+  }
+
+  .sort-form {
+    float: right;
+    margin-top: 3px;
+    margin-bottom: 20px;
+  }
+
+  .sort-filtering {
+    width: 140px; /* ボックスの高さを指定する */
+    font-size: 12px;
+    float: right;
+  }
+  
+  .sort-filtering select {
+    height: 20px;
+    width: 136px;
+  }
+
+  .sort-button {
+    height: 24px;
+    width: 24px;
+    margin-left: 3px;
+  }
+
+  .my-words-piece {
+    width: 100%;
+    min-height: 30px;
+    font-size: 10px;
+  }
+
+  .my-words-japanese {
+    display: block;
+  }
+
+  .my-words-kana, .my-words-kanji {
+    width: 100%;
+  }
+
+  .my-words-kana, .my-words-kanji, .my-words-english {
+    padding-left: 10px;
+  }
+
+  .my-words-buttons {
+    height: 15px;
+    margin-top: 2px;
+    margin-bottom: 13px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .my-words-buttons img.star-button {
+    width: 15px;
+    height: 15px;
+  }
+  
+  img.my-words-edit-button {
+    width: 15px;
+    height: 15px;
+    text-decoration: none;
+    margin-left: 5px;
   }
 }

@@ -4,6 +4,7 @@
   background-color: #003366;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .header-left {
@@ -52,17 +53,17 @@
 
 .header-right-lists li .sub-my-page {
   position: absolute;
-  left: -81px;
+  left: -78px;
 }
 
 .header-right-lists li .sub-out {
   position: absolute;
-  left: -36px;
+  left: -33px;
 }
 
 .header-right-lists li .sub-in {
   position: absolute;
-  left: -43px;
+  left: -40px;
 }
 
 .header-right-lists li ul li {
@@ -75,6 +76,7 @@
   height: 30px;
   width: 118px;
   background-color: lightgray;
+  z-index: 2;
 }
 
 .header-right-lists li:hover .sub-out li{
@@ -91,8 +93,8 @@
 }
 
 .header-right-button {
-  height: 25px;
-  width: 25px;
+  height: 40px;
+  width: 40px;
   border: 3px solid white;
   border-radius: 5px;
   padding: 3px;
@@ -101,6 +103,7 @@
 
 /* 検索フォーム */
 .header-lower {
+  z-index: 1;
 }
 
 .search-form {
@@ -138,8 +141,8 @@
   -moz-appearance: none; /* ベンダープレフィックス(Firefox用) */
   appearance: none; /* 標準のスタイルを無効にする */
   display: block; /* ブロックレベル要素化する */
-  height: 32px;
-  width: 190px; /* ボックスの高さを指定する */
+  height: 31px;
+  width: 186px; /* ボックスの高さを指定する */
   padding-left: 10px; /* ボックス内側の余白を指定する */
   color: #003366; /* フォントの色を指定 */
   border: none; /* 境界線をなしに指定する */
@@ -153,18 +156,68 @@
 
 /* 検索条件 */
 .search-word{
-  height: 32px;
+  height: 35px;
   width: 300px;
   border: 2px solid #003366;
   border-radius: 5px;
   margin-left: 3px;
+  padding-left: 10px;
 }
 
 .search-button {
-  height: 24px;
-  width:24px;
+  height: 35px;
+  width: 35px;
   padding: 3px;
   border: 3px solid #003366;
   border-radius: 5px;
   margin-left: 3px;
+}
+
+@media (max-width: 500px) {
+  .header-upper {
+    height: 100px;
+  }
+
+  .header-left {
+    width: 100%;
+    
+  }
+
+  .app-title {
+    font-size: 30px;
+    margin-left: 5px;
+  }
+
+  .header-right {
+    width: 100%;
+  }
+
+  .header-right-lists li {
+    margin-right: 7px;
+  }
+
+  .user_name {
+    font-size: 20px;
+  }
+
+  .search-form {
+    display: block;
+    margin: 10px 15px 0 0;
+    padding: 0 5px;
+  }
+
+  .search-form {
+    margin: 5px 0 0 0
+  }
+
+  .search-word{
+    margin: 5px 0 0 0;
+    width: calc(100% - 41px);
+  }
+
+  .search-button {
+    margin-left: 0;
+    vertical-align: bottom;
+  }
+  
 }

@@ -1,6 +1,5 @@
 /* フォーム全体 */
 .edit-wrap {
-  min-width: 700px;
 }
 
 .word-edit {
@@ -13,7 +12,7 @@
   font-size: 20px;
   font-weight: bold;
   color: #003366;
-  border-bottom: 4px solid #003366;
+  border-bottom: 5px solid #003366;
   margin: 0 auto;
 }
 
@@ -45,7 +44,7 @@
 }
 
 .kana-text, .kanji-text, .english-text, .pos-select {
-  height: 25px; 
+  height: 30px; 
   width: 100%;
   border: 2px solid black;
   border-radius: 5px;
@@ -67,7 +66,6 @@
 
 /* 投稿ボタン */
 .edit {
-  min-width: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,7 +83,7 @@
 }
 
 .cancel-button {
-  height: 26px;
+  height: 30px;
   width: 68px;
   font-size: 13px;
   font-weight: bold;
@@ -108,6 +106,35 @@
 
 @media (max-width: 500px) {
   .word-edit {
-    width:80%;
+    width:85%;
+    margin-top: 30px;
+  }
+
+  .word-kana-wrap, .word-kanji-wrap, .word-english-wrap, .word-class-wrap, .image {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .image-button {
+    font-size: 13px;
+  }
+
+  .class-select {
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .kana-form-title, .kanji-form-title, .english-form-title, .class-form-title, .explanation-form-title, .image-form-title {
+    font-size: 15px;
+  } 
+
+  .kana-text, .kanji-text, .english-text, .pos-select {
+    font-size: 13px;
+    padding-left: 5px;
+  }  
+
+  .explanation-text {
+    font-size: 13px;
+    padding: 5px;
   }
 }
