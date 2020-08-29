@@ -6,7 +6,7 @@
       results for "<%= @word %>"
     </div>
   </div>
-  <div class="wrap">
+  <div class="search-wrap">
   <% @words.each do |word| %>
     <%= link_to word_path(word.id), class:"search-result-piece" do%>
       <%# <div class="search-result-piece"> %>
@@ -40,3 +40,5 @@
   </div>
   <%= paginate @words%>
 </div>
+
+<%= render "shared/footer_2" %>

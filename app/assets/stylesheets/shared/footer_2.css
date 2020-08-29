@@ -1,0 +1,23 @@
+.footer-2 {
+  height:30px;
+  background-color: #003366;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright-2 {
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+@media (max-width: 500px) {
+  .footer-2 {
+    height:25px;
+  }
+
+  .copyright-2 {
+    font-size: 10px;
+  }
+}

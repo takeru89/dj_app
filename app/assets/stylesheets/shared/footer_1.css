@@ -1,0 +1,22 @@
+.footer-1 {
+  height:30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright-1 {
+  color: #003366;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+@media (max-width: 500px) {
+  .footer-1 {
+    height:25px;
+  }
+
+  .copyright-1 {
+    font-size: 10px;
+  }
+}

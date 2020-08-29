@@ -1,6 +1,6 @@
 .favorites-wrap {
   width: 60%;
-  margin: 0 auto;
+  margin: 0 auto 100px;
 }
 
 .favorites-header {
@@ -28,10 +28,14 @@ img.csv-button {
   margin-right: 10px;
 }
 
+.favorites-list {
+  margin: 0 auto;
+}
+
 .favorites-piece {
   width: 100%;
   margin: 0 auto;
-  height: 50px;
+  min-height: 50px;
   display: flex;
   align-items: center;
   border: 2px solid black;
@@ -90,7 +94,7 @@ img.csv-button {
 .sort-filtering {
   position: relative; /* 選択ボックスの位置指定 */
   display: block; /* ブロックレベル要素化にする */
-  width: 150px; /* ボックスの高さを指定する */
+  width: 180px; /* ボックスの高さを指定する */
   border: 2px solid #003366;/* ボックスの境界線を実線で指定する */
   border-radius: 5px; /* ボックスに角丸を指定する */
 }
@@ -115,7 +119,7 @@ img.csv-button {
   appearance: none; /* 標準のスタイルを無効にする */
   display: block; /* ブロックレベル要素化する */
   height: 26px;
-  width: 150px; /* ボックスの高さを指定する */
+  width: 177px; /* ボックスの高さを指定する */
   padding-left: 10px; /* ボックス内側の余白を指定する */
   color: #003366; /* フォントの色を指定 */
   border: none; /* 境界線をなしに指定する */
@@ -131,4 +135,95 @@ img.csv-button {
   height: 30px;
   width: 30px;
   margin-left: 3px;
+}
+
+/* responsive */
+@media (max-width: 1000px) {
+  .favorites-wrap {
+    width:85%;
+  }
+}
+
+@media (max-width: 500px) {
+  .favorites-header {
+    margin: 30px auto;
+    border-bottom: none;
+    display: block;
+  }
+
+  .favorites-title {
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 5px solid #003366;
+  }
+
+  .favorite-header-right {
+    float: right;
+  }
+
+  img.csv-button {
+    height: 23px;
+    width: 23px;
+    margin-top: 3px;
+    margin-right: 5px;
+  }
+
+  .favorite-header-right .sort-form {
+    float: right;
+    margin-top: 1.5px;
+    margin-bottom: 10px;
+  }
+
+  .sort-filtering {
+    width: 140px; /* ボックスの高さを指定する */
+    font-size: 12px;
+    float: right;
+  }
+  
+  .sort-filtering select {
+    height: 20px;
+    width: 136px;
+  }
+
+  .sort-button {
+    height: 24px;
+    width: 24px;
+    margin-left: 3px;
+  }
+
+  .favorites-piece {
+    width: 100%;
+    min-height: 30px;
+    font-size: 10px;
+  }
+
+  .favorites-japanese {
+    display: block;
+  }
+
+  .favorites-kana, .favorites-kanji {
+    width: 100%;
+  }
+
+  .favorites-kana, .favorites-kanji, .favorites-english {
+    padding-left: 10px;
+  }
+
+  .favorites-piece-below {
+    height: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .favorites-piece-below img.star-button {
+    width: 15px;
+    height: 15px;
+  }
+  
+  .favorites-piece-author {
+    font-size: 12px;
+    padding: 0 5px;
+    text-align: end;
+    vertical-align: top;
+  }
 }

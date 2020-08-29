@@ -15,7 +15,7 @@
       </div>
     </div>
   </div>
-  <div class="wrap">
+  <div class="favorites-list">
   <% @favorites.each do |favorite| %>
     <div id="favorites-word-<%= favorite.word.id %>">
       <%= link_to word_path(favorite.word.id), class:"favorites-piece" do %> 
@@ -48,3 +48,5 @@
   </div>
   <%= paginate @favorites%>
 </div>
+
+<%= render "shared/footer_2" %>

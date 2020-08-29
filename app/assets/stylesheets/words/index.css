@@ -1,21 +1,134 @@
 /* tag cloud */
 .tag-cloud-wrap {
-  min-width: 700px;
   display: flex;
   justify-content: center;
 }
 
 .tag-cloud{
-
 }
 
-
 .tagcloud-piece {
-  color: black;
+  color: rgb(31, 30, 30);
   font-size: 15px;
   font-weight: bold;
   text-decoration: none;
-  background: -webkit-linear-gradient(0deg, blue, #15b610, rgb(247, 183, 5));
+  /* background: -webkit-linear-gradient(0deg, blue, #15b610, rgb(247, 183, 5));
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
 }
+
+/* app introduction */
+.about {
+  background-color: #003366;
+  padding: 30px 0;
+  /* min-width: 700px; */
+}
+
+.about-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.info-title {
+  font-size: 35px;
+  font-style: italic;
+}
+
+.info-contents {
+  width: 40%;
+  font-size: 20px;
+  text-align: justify;
+  line-height: 30px;
+  color: white;
+  word-break: normal;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.member-buttons {
+  margin-top: 70px;
+}
+
+.register-link-button {
+  width:  300px;
+  color: #003366;
+  font-weight: bold;
+  text-align: center;
+  background-color: greenyellow;
+  border-top: 2px solid gray;
+  border-left: 2px solid gray;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+.login-link-button {
+  width:  200px;
+  color: #003366;
+  font-weight: bold;
+  text-align: center;
+  background-color: white;
+  border-top: 2px solid gray;
+  border-left: 2px solid gray;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 5px;
+  padding: 9px;
+  display: block;
+  margin: 30px auto 0;
+}
+
+@media (max-width: 500px) {
+  .tag-cloud {
+    margin: 15px 0;
+  }
+
+  .tagcloud-piece {
+    font-size: 10px;
+  }
+
+  .info-title {
+    font-size: 20px;
+    font-style: italic;
+  }
+
+  .info-contents {
+    width: 80%;
+    font-size: 11px;
+    line-height: 20px;
+    margin-bottom: 30px; 
+  }
+
+  .member-buttons {
+    margin-top: 40px;
+  }
+
+  .register-link-button {
+    width:  150px;
+    font-size: 12px;
+    padding: 4px;
+  }
+
+  .login-link-button {
+    width:  100px;
+    font-size: 12px;
+    padding: 4px;
+    margin: 20px auto 0;
+  }
+}
+
+/* top page after logging in */
+.top-info {
+  background-color: #003366;
+  padding: 30px 0;
+}
+
+.top-info-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
