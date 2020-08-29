@@ -1,7 +1,7 @@
 class Request < ApplicationRecord
   belongs_to :user
 
-  validates :request_word, presence: true
+  validates :request_word, presence: true, length: { maximum: 50 }
 
   def self.wrequest
     to = Time.current
