@@ -4,6 +4,6 @@ class Favorite < ApplicationRecord
 
   with_options presence: true do
     validates :user_id
-    validates :word_id, uniqueness: {scope: :user_id} 
+    validates :word_id, uniqueness: { scope: :user_id }
   end
 end
