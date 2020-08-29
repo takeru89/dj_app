@@ -2,23 +2,10 @@ class RequestsController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    @request = Request.new(request_params)
-    if @request.save
-      redirect_to root_path
-    else
-      flash.now[:alert] = 'Request Failed'
-      render root_path
-    end
-  end
-
-  def destroy
-    @request = Request.find(request_params)
-    if @request.destroy
-      redirect_to root_path
-    else
-      flash.now[:alert] = 'Delete Failed'
-      render root_path
-    end
+    request = Request.create(request_params)
+    render json: { request: request,
+                   request_date: request.created_at.strftime('%Y/%m/%d'),
+                   request_person: request.user.nickname }
   end
 
   private

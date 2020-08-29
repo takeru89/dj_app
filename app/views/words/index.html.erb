@@ -29,6 +29,8 @@
       <div class="request-wrap">
         <p class="request-title">Requested Words</p>
         <div class="request-contents">
+          <div id="requested-add">
+          </div>
           <% @requests.each do |request|%>
             <ul class="requested-piece">
               <li class="requested-date">
@@ -39,9 +41,9 @@
           <% end %>
         </div>
         <div class="request-form-wrap">
-          <%= form_with model: @request, url: requests_path, local: true, class:"request-form" do |f| %>
-            <%= f.text_field :request_word, placeholder:"50 characters or less", class: "request-input" %>
-            <%= f.submit "Request", class:"request-button" %>
+          <%= form_with model: @request, url: requests_path, local: true, class:"request-form", id:"request-form" do |f| %>
+            <%= f.text_field :request_word, placeholder:"50 characters or less", class: "request-input", id:"request-input" %>
+            <%= f.submit "Request", class:"request-button", id:"request-submit" %>
           <% end %>
         </div>
       </div>
