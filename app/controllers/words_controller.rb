@@ -4,9 +4,9 @@ class WordsController < ApplicationController
                                   :myword_update, :myword_destroy]
   before_action :set_cache_buster
 
-
   def index
     @words = Word.includes(:user).order('created_at DESC').limit(200)
+    @requests = Request.includes(:user).wrequest.order('created_at DESC')
   end
 
   def new
@@ -90,8 +90,8 @@ class WordsController < ApplicationController
   end
 
   def set_cache_buster
-    response.headers["Cache-Control"] = "no-cache, no-store, max-age=0, must-revalidate"
-    response.headers["Pragma"] = "no-cache"
-    response.headers["Expires"] = "Fri, 01 Jan 1990 00:00:00 GMT"
+    response.headers['Cache-Control'] = 'no-cache, no-store, max-age=0, must-revalidate'
+    response.headers['Pragma'] = 'no-cache'
+    response.headers['Expires'] = 'Fri, 01 Jan 1990 00:00:00 GMT'
   end
 end

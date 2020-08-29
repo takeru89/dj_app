@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :words
   has_many :favorites, dependent: :destroy
+  has_many :requests
 
   EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i.freeze
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[A-Z])(?=.*?[\d])\w{8,}\z/i.freeze

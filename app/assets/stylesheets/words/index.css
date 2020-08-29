@@ -81,6 +81,78 @@
   margin: 30px auto 0;
 }
 
+
+
+/* top page after logging in */
+.user-top {
+  background-color: #003366;
+  padding: 30px 0;
+}
+
+.user-contents {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.request-wrap {
+  width: 50%;
+  /* background-color: turquoise; */
+  margin-bottom: 100px;
+}
+
+.request-title {
+  width: 70%;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  margin: 0 auto 15px;
+}
+
+.request-contents {
+  height: 500px;
+  overflow: scroll;
+  width: 70%;
+  background-color: white;
+  margin: 0 auto 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.requested-piece {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #003366;
+}
+
+.requested-date {
+  font-size: 12px;
+  color: gray;
+}
+
+.requested-word {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.request-form {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.request-input {
+  width: 78%;
+  font-size: 15px;
+  padding: 1px 0 1px 5px;
+}
+
+.request-button {
+  font-size: 12px;
+  font-weight: bold;
+  width: 20%;
+  padding: 3.5px 5px;
+  float: right;
+}
+
+
 @media (max-width: 500px) {
   .tag-cloud {
     margin: 15px 0;
@@ -118,17 +190,5 @@
     padding: 4px;
     margin: 20px auto 0;
   }
-}
-
-/* top page after logging in */
-.top-info {
-  background-color: #003366;
-  padding: 30px 0;
-}
-
-.top-info-box {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
 }
 
