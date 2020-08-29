@@ -24,14 +24,28 @@
 </div>
 
 <% if user_signed_in? %>
-  <div class="top-info">
-    <div class="top-info-box">
-      <div class="request-words">
+  <div class="user-top">
+    <div class="user-contents">
+      <div class="request-wrap">
         <p class="request-title">Requested Words</p>
         <div class="request-contents">
+          <% @requests.each do |request|%>
+            <ul class="requested-piece">
+              <li class="requested-date">
+                <%= request.created_at.strftime('%Y/%m/%d') %> by <%= request.user.nickname %>
+              </li>
+              <li class="requested-word"><%= request.request_word %></li>
+            </ul>
+          <% end %>
         </div>
-
+        <div class="request-form-wrap">
+          <%= form_with model: @request, url: requests_path, local: true, class:"request-form" do |f| %>
+            <%= f.text_field :request_word, placeholder:"50 characters or less", class: "request-input" %>
+            <%= f.submit "Request", class:"request-button" %>
+          <% end %>
+        </div>
       </div>
+
       <div class="pick-up">
         <p class="pick-up-title">Pick Up</p>
         <div class="pick-up-contents">

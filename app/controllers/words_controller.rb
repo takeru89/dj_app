@@ -7,7 +7,7 @@ class WordsController < ApplicationController
 
   def index
     @words = Word.includes(:user).order('created_at DESC').limit(200)
-    @requests = Request.wrequest.order('created_at DESC')
+    @requests = Request.includes(:user).wrequest.order('created_at DESC')
   end
 
   def new

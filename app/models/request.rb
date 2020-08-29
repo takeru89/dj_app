@@ -1,7 +1,7 @@
 class Request < ApplicationRecord
   belongs_to :user
 
-  validates :request, presence: true
+  validates :request_word, presence: true
 
   def self.wrequest
     to = Time.current
