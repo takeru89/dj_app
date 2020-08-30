@@ -51,6 +51,13 @@
       <div class="pick-up">
         <p class="pick-up-title">Pick Up</p>
         <div class="pick-up-contents">
+        <% @random_words.each do |random|%>
+            <ul class="spotlight-piece">
+              <li class="">
+                <%= image_tag random.image %>
+              </li>
+            </ul>
+          <% end %>
         </div>
         
       </div>
