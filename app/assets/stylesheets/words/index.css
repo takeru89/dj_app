@@ -94,9 +94,9 @@
   flex-wrap: wrap;
 }
 
+/* Requested Words */
 .request-wrap {
   width: 50%;
-  /* background-color: turquoise; */
   margin-bottom: 100px;
 }
 
@@ -151,7 +151,60 @@
   padding: 3.5px 5px;
   float: right;
 }
+/* /Requested Words */
 
+/* Spotlight */
+.spotlight-wrap {
+  width: 50%;
+  margin-bottom: 100px;
+}
+
+.spotlight-title {
+  width: 70%;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  margin: 0 auto 15px;
+}
+
+.spotlight-contents {
+  height: 500px;
+  width: 70%;
+  background-color: white;
+  margin: 0 auto 10px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.spotlight-piece {
+  height: 100%;
+  background-color:rgb(235, 231, 231);
+}
+
+.spotlight-image img {
+  height: 300px;
+  width: 100%;
+}
+
+.spotlight-table {
+  font-weight: bold;
+  line-height: 30px;
+  width: 100%;
+}
+
+.spotlight-table tr td {
+  padding: 0 10px;
+}
+
+.spotlight-table-left {
+  width: 30%;
+}
+
+.spotlight-author {
+  text-align: right;
+  padding-right: 10px;
+  margin-top: 10px;
+}
 
 @media (max-width: 500px) {
   .tag-cloud {
