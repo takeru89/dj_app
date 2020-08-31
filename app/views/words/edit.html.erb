@@ -51,7 +51,7 @@
     </div>
     <div class="edit">
       <%= f.submit "Edit", class:"edit-post-button" %>
-      <%= link_to "Cancel", word_path(@word.id), class:"cancel-button" %>
+      <%= link_to "Cancel", :back, class:"cancel-button" %>
     </div>
   <% end %>
 </div>
