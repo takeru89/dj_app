@@ -7,9 +7,6 @@ Rails.application.routes.draw do
     collection do
       get 'search'
     end
-    member do
-      delete 'myword_destroy'
-    end
     resources :favorites, only: [:create, :destroy]
   end
 

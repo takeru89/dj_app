@@ -1,7 +1,6 @@
 class WordsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show, :search]
-  before_action :set_word, only: [:show, :edit, :update, :destroy,
-                                  :myword_destroy]
+  before_action :set_word, only: [:show, :edit, :update, :destroy]
   before_action :set_cache_buster
 
   def index
@@ -32,11 +31,6 @@ class WordsController < ApplicationController
 
   def show
     @favorite = Favorite.find_by(word_id: @word.id)
-    @delete_path = if request.referer.include?('/users/')
-                     myword_destroy_word_path(@word.id)
-                   else
-                     word_path(@word.id)
-                   end
   end
 
   def edit
@@ -52,7 +46,7 @@ class WordsController < ApplicationController
 
   def destroy
     if @word.destroy
-      redirect_to root_path
+      redirect_to user_path(@word.user_id)
     else
       flash.now[:alert] = 'Delete Failed'
       render @word
@@ -63,15 +57,6 @@ class WordsController < ApplicationController
     method = params[:search_method]
     @word = params[:search_word]
     @words = Word.search(method, @word).page(params[:page]).per(10)
-  end
-
-  def myword_destroy
-    if @word.destroy
-      redirect_to user_path(@word.user_id)
-    else
-      flash.now[:alert] = 'Delete Failed'
-      render @word
-    end
   end
 
   private
