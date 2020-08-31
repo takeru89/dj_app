@@ -44,6 +44,7 @@
 .kana-text, .kanji-text, .english-text, .pos-select {
   height: 30px; 
   width: 100%;
+  padding-left: 5px;
   border: 2px solid black;
   border-radius: 5px;
 }
@@ -62,6 +63,7 @@
 .explanation-text {
   height: 300px;
   width: 100%;
+  padding: 5px;
   border: 2px solid black;
   border-radius: 5px;
 }
@@ -117,6 +119,10 @@
     margin-top: 30px;
   }
 
+  .post-header-text {
+    font-size: 20px;
+  }
+
   .word-kana-wrap, .word-kanji-wrap, .word-english-wrap, .word-class-wrap, .image {
     margin-bottom: 20px;
     width: 100%;
@@ -135,13 +141,7 @@
     font-size: 15px;
   } 
 
-  .kana-text, .kanji-text, .english-text, .pos-select {
+  .kana-text, .kanji-text, .english-text, .pos-select, .explanation-text {
     font-size: 13px;
-    padding-left: 5px;
   }  
-
-  .explanation-text {
-    font-size: 13px;
-    padding: 5px;
-  }
 }
