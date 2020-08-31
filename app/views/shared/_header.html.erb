@@ -1,7 +1,12 @@
 <header>
   <div class="header-upper">
     <div class="header-left">
-      <%= link_to "Dict Japonicus", "/words", class:"app-title" %>
+      <%= link_to "/words" do %>
+        <div class="header-left-contents">
+          <%= image_tag 'dj_logo.png', class:"logo" %>
+          <span class="app-title">Dict Japonicus</span>
+        </div>
+      <% end %>
     </div>
 
     <div class="header-right">
