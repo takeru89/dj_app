@@ -1,7 +1,7 @@
 <%= render "shared/header" %>
 
 <div class="edit-wrap">
-  <%= form_with model: @word, url: @path, class: "word-edit", local: true do |f| %>
+  <%= form_with model: @word, url: word_path(@word.id), class: "word-edit", local: true do |f| %>
     <div class="edit-header">
       <h1 class="edit-header-text">
         Edit Word Info.

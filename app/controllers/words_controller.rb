@@ -1,7 +1,7 @@
 class WordsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show, :search]
   before_action :set_word, only: [:show, :edit, :update, :destroy,
-                                  :myword_update, :myword_destroy]
+                                  :myword_destroy]
   before_action :set_cache_buster
 
   def index
@@ -40,11 +40,6 @@ class WordsController < ApplicationController
   end
 
   def edit
-    @path = if request.referer.include?('/users/')
-              myword_update_word_path(@word.id)
-            else
-              word_path(@word.id)
-            end
   end
 
   def update
@@ -68,14 +63,6 @@ class WordsController < ApplicationController
     method = params[:search_method]
     @word = params[:search_word]
     @words = Word.search(method, @word).page(params[:page]).per(10)
-  end
-
-  def myword_update
-    if @word.update(word_params)
-      redirect_to user_path(@word.user_id)
-    else
-      render :edit
-    end
   end
 
   def myword_destroy

@@ -8,8 +8,6 @@ Rails.application.routes.draw do
       get 'search'
     end
     member do
-      patch 'myword_update'
-      put 'myword_update'
       delete 'myword_destroy'
     end
     resources :favorites, only: [:create, :destroy]
