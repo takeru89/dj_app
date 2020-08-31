@@ -26,6 +26,8 @@
 <% if user_signed_in? %>
   <div class="user-top">
     <div class="user-contents">
+
+      <%# Requested Words %>
       <div class="request-wrap">
         <p class="request-title">Requested Words</p>
         <div class="request-contents">
@@ -47,13 +49,60 @@
           <% end %>
         </div>
       </div>
+      <%# /Requested Words %>
 
-      <div class="pick-up">
-        <p class="pick-up-title">Pick Up</p>
-        <div class="pick-up-contents">
+      <%# Spotlight %>
+      <div class="spotlight-wrap">
+        <p class="spotlight-title">Spotlight</p>
+        <div class="spotlight-contents">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <% @random_words.each do |random|%>
+                <div class="swiper-slide">
+                <%= link_to word_path(random.id), class: "spotlight-link" do%>
+                  <div class="spotlight-piece">
+                    <div class="spotlight-image">
+                      <%= image_tag random.image %>
+                    </div>
+                    <table class="spotlight-table">
+                      <tr>
+                        <td class="spotlight-table-left">kana:</td>
+                        <td class="spotlight-table-right"><%= random.kana %></td>
+                      </tr>
+                      <tr>
+                        <td class="spotlight-table-left">kanji:</td>
+                          <% if random.kanji.present? %>
+                            <td class="spotlight-table-right"><%= random.kanji %></td>
+                          <% else %>
+                            <td class="spotlight-table-right">---</td>
+                          <% end %>
+                      </tr>
+                      <tr>
+                        <td class="spotlight-table-left">class:</td>
+                        <td class="spotlight-table-right"><%=random.word_class.name %></td>
+                      </tr>
+                      <tr>
+                        <td class="spotlight-table-left">english:</td>
+                        <td class="spotlight-table-right"><%= random.english %><td>
+                      </tr>
+                    </table>
+                    <p class="spotlight-author">by <%= random.user.nickname %>
+                  </div>
+                <% end %>
+                </div>
+              <% end %>
+            </div>
+            <div class="swiper-pagination-spotlight"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+          </div>
         </div>
-        
       </div>
+      <%# /Spotlight %>
+
     </div>
   </div>
 <%else%>

@@ -91,12 +91,11 @@
 
 .user-contents {
   display: flex;
-  flex-wrap: wrap;
 }
 
+/* Requested Words */
 .request-wrap {
   width: 50%;
-  /* background-color: turquoise; */
   margin-bottom: 100px;
 }
 
@@ -151,8 +150,73 @@
   padding: 3.5px 5px;
   float: right;
 }
+/* /Requested Words */
 
+/* Spotlight */
+.spotlight-wrap {
+  width: 50%;
+  margin-bottom: 100px;
+}
 
+.spotlight-title {
+  width: 70%;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  margin: 0 auto 15px;
+}
+
+.spotlight-contents {
+  height: 500px;
+  width: 70%;
+  background-color: white;
+  margin: 0 auto 10px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.spotlight-link {
+  color: black;
+  text-decoration: none;
+}
+
+.spotlight-piece {
+  height: 100%;
+  background-color:rgb(243, 239, 239);
+}
+
+.spotlight-image img {
+  height: 300px;
+  width: 100%;
+  object-fit: contain;
+  background-color: white;
+}
+
+.spotlight-table {
+  height: 120px;
+  width: 100%;
+}
+
+.spotlight-table tr td {
+  padding: 0 10px;
+}
+
+.spotlight-table-left {
+  width: 30%;
+  font-weight: bold;
+}
+
+.spotlight-author {
+  text-align: right;
+  padding-right: 10px;
+  margin-top: 10px;
+}
+
+.swiper-pagination-spotlight {
+  text-align: center;
+}
+
+/* smart phone */
 @media (max-width: 500px) {
   .tag-cloud {
     margin: 15px 0;
@@ -190,5 +254,64 @@
     padding: 4px;
     margin: 20px auto 0;
   }
-}
 
+  .user-contents {
+    display: block;
+  }
+
+  .request-wrap, .spotlight-wrap {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+  .request-contents, .spotlight-contents {
+    width: 85%;
+    height: 450px;
+  }
+
+  .request-title, .spotlight-title {
+    width: 85%;
+    font-size: 20px;
+  }
+
+  .requested-date {
+    font-size: 11px;
+  }
+  
+  .requested-word {
+    font-size: 13px;
+  }
+
+  .request-form {
+    width: 85%;
+  }
+
+  .request-input {
+    font-size: 14px;
+  }
+  
+  .request-button {
+    font-size: 11px;
+  }
+
+  .spotlight-image img {
+    height: 270px;
+  }
+  
+  .spotlight-table {
+    height: 100px;
+  }
+  
+  .spotlight-table-left {
+    width: 30%;
+    font-size: 13px;
+  }
+
+  .spotlight-table-right, .spotlight-author {
+    font-size: 13px;
+  }
+  
+  .swiper-pagination-spotlight {
+    text-align: center;
+  }
+}
