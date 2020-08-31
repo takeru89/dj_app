@@ -91,7 +91,6 @@
 
 .user-contents {
   display: flex;
-  flex-wrap: wrap;
 }
 
 /* Requested Words */
@@ -190,11 +189,11 @@
   height: 300px;
   width: 100%;
   object-fit: contain;
+  background-color: white;
 }
 
 .spotlight-table {
   height: 120px;
-  font-weight: bold;
   width: 100%;
 }
 
@@ -204,6 +203,7 @@
 
 .spotlight-table-left {
   width: 30%;
+  font-weight: bold;
 }
 
 .spotlight-author {
@@ -216,6 +216,7 @@
   text-align: center;
 }
 
+/* smart phone */
 @media (max-width: 500px) {
   .tag-cloud {
     margin: 15px 0;
@@ -253,5 +254,64 @@
     padding: 4px;
     margin: 20px auto 0;
   }
-}
 
+  .user-contents {
+    display: block;
+  }
+
+  .request-wrap, .spotlight-wrap {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+  .request-contents, .spotlight-contents {
+    width: 85%;
+    height: 450px;
+  }
+
+  .request-title, .spotlight-title {
+    width: 85%;
+    font-size: 20px;
+  }
+
+  .requested-date {
+    font-size: 11px;
+  }
+  
+  .requested-word {
+    font-size: 13px;
+  }
+
+  .request-form {
+    width: 85%;
+  }
+
+  .request-input {
+    font-size: 14px;
+  }
+  
+  .request-button {
+    font-size: 11px;
+  }
+
+  .spotlight-image img {
+    height: 270px;
+  }
+  
+  .spotlight-table {
+    height: 100px;
+  }
+  
+  .spotlight-table-left {
+    width: 30%;
+    font-size: 13px;
+  }
+
+  .spotlight-table-right, .spotlight-author {
+    font-size: 13px;
+  }
+  
+  .swiper-pagination-spotlight {
+    text-align: center;
+  }
+}
