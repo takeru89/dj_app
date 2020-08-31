@@ -56,4 +56,13 @@
   </div>
 </div>
 
+<div class="transition-buttons">
+  <% if @previous_path == "edit" %>
+    <%= link_to image_tag('home_button.png', class:"home-button"), root_path %>
+    <%= link_to image_tag('my_page_button.png', class:"my-page-button"), user_path(@word.user_id)%>
+  <% else %>
+    <%= link_to image_tag('back_button.png', class:"back-button"), :back %>
+  <% end%>
+</div>
+
 <%= render "shared/footer_2" %>

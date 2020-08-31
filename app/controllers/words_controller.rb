@@ -31,6 +31,8 @@ class WordsController < ApplicationController
 
   def show
     @favorite = Favorite.find_by(word_id: @word.id)
+    previous_url = Rails.application.routes.recognize_path(request.referer)
+    @previous_path = previous_url[:action]
   end
 
   def edit
