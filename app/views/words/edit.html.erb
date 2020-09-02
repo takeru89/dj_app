@@ -1,7 +1,7 @@
 <%= render "shared/header" %>
 
 <div class="edit-wrap">
-  <%= form_with model: @word, url: @path, class: "word-edit", local: true do |f| %>
+  <%= form_with model: @word, url: word_path(@word.id), class: "word-edit", local: true do |f| %>
     <div class="edit-header">
       <h1 class="edit-header-text">
         Edit Word Info.
@@ -51,7 +51,7 @@
     </div>
     <div class="edit">
       <%= f.submit "Edit", class:"edit-post-button" %>
-      <%= link_to "Cancel", word_path(@word.id), class:"cancel-button" %>
+      <%= link_to "Cancel", :back, class:"cancel-button" %>
     </div>
   <% end %>
 </div>

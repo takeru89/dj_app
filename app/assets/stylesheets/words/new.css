@@ -8,9 +8,8 @@
 }
 
 .post-header-text {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
-  color: #003366;
   border-bottom: 5px solid #003366;
   margin: 0 auto;
 }
@@ -45,6 +44,7 @@
 .kana-text, .kanji-text, .english-text, .pos-select {
   height: 30px; 
   width: 100%;
+  padding-left: 5px;
   border: 2px solid black;
   border-radius: 5px;
 }
@@ -63,42 +63,47 @@
 .explanation-text {
   height: 300px;
   width: 100%;
+  padding: 5px;
   border: 2px solid black;
   border-radius: 5px;
 }
 
 /* 投稿ボタン */
 .post {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
 }
 
-.post-button{
-  height: 30px;
-  width: 70px;
-  color: white;
+.post-button {
+  width:  300px;
+  color: greenyellow;
   font-weight: bold;
+  text-align: center;
   background-color: #003366;
+  border-top: 2px solid gray;
+  border-left: 2px solid gray;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
   border-radius: 5px;
-  margin-right: 10px;
+  padding: 10px;
+  display: block;
+  margin: 0 auto;
 }
 
-.back-button {
-  height: 30px;
-  width: 68px;
-  font-size: 13px;
-  font-weight: bold;
+.cancel-button {
+  width:  200px;
   color: #003366;
-  background-color: white;
-  border-radius: 5px;
-  border-top: 2px solid gray; border-left: 2px solid gray;
-  border-bottom: 2px solid black; border-right: 2px solid black;
+  font-weight: bold;
   text-decoration: none;
   text-align: center;
-  line-height: 27px;
-  margin-left: 10px;
+  background-color: white;
+  border-top: 2px solid gray;
+  border-left: 2px solid gray;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 5px;
+  padding: 8px;
+  display: block;
+  margin: 30px auto 0;
 }
 
 /* responsive */
@@ -112,6 +117,10 @@
   .word-registration {
     width:85%;
     margin-top: 30px;
+  }
+
+  .post-header-text {
+    font-size: 20px;
   }
 
   .word-kana-wrap, .word-kanji-wrap, .word-english-wrap, .word-class-wrap, .image {
@@ -132,13 +141,7 @@
     font-size: 15px;
   } 
 
-  .kana-text, .kanji-text, .english-text, .pos-select {
+  .kana-text, .kanji-text, .english-text, .pos-select, .explanation-text {
     font-size: 13px;
-    padding-left: 5px;
   }  
-
-  .explanation-text {
-    font-size: 13px;
-    padding: 5px;
-  }
 }
