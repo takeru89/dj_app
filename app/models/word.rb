@@ -5,9 +5,9 @@ class Word < ApplicationRecord
   belongs_to_active_hash :word_class
   has_one_attached :image
 
-  KANA_REGEX = /\A[ぁ-んァ-ヶー－]+\z/.freeze
+  KANA_REGEX = /\A[ぁ-んァ-ヶー－、。]+\z/.freeze
   KANJI_REGEX = /\A[ぁ-んァ-ン一-龥ー－]*?[一-龥]+[ぁ-んァ-ン一-龥ー－]*?\z/.freeze
-  ENGLISH_REGEX = /\A[a-zA-Z\-]+\z/.freeze
+  ENGLISH_REGEX = /\A[a-zA-Z.,'\-\s]+\z/.freeze
 
   with_options presence: true do
     validates :kana, format: { with: KANA_REGEX }

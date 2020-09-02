@@ -58,7 +58,7 @@ class WordsController < ApplicationController
   def search
     method = params[:search_method]
     @word = params[:search_word]
-    @words = Word.search(method, @word).page(params[:page]).per(10)
+    @words = Word.search(method, @word).order('kana ASC').page(params[:page]).per(10)
   end
 
   private
