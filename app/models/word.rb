@@ -7,7 +7,7 @@ class Word < ApplicationRecord
 
   KANA_REGEX = /\A[ぁ-んァ-ヶー－、。]+\z/.freeze
   KANJI_REGEX = /\A[ぁ-んァ-ン一-龥ー－]*?[一-龥]+[ぁ-んァ-ン一-龥ー－]*?\z/.freeze
-  ENGLISH_REGEX = /\A[a-zA-Z.'\-\s]+\z/.freeze
+  ENGLISH_REGEX = /\A[a-zA-Z.,'\-\s]+\z/.freeze
 
   with_options presence: true do
     validates :kana, format: { with: KANA_REGEX }
