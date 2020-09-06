@@ -1,0 +1,17 @@
+<div class="background">
+  <div class="delete-wrap">
+      <h1 class="delete-header-text">
+        Delete your account?
+      </h1>
+      <p class="delete-confirmation-text">
+        If you delete your account, your posts and favorites will also be deleted.<br>
+        Are you sure you want to delete your account?
+      </p>
+      <div class="delete-user">
+        <%= button_to "Delete", user_path(current_user), method: :delete, class: "delete-user-button" %>
+      </div>
+      <div class="delete-bottom">
+        <%= link_to image_tag('dj_logo.png', class:"delete-bottom-logo"), "/words" %>
+      </div>
+
+</div>

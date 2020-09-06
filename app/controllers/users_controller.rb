@@ -13,6 +13,17 @@ class UsersController < ApplicationController
     end
   end
 
+  def delete_confirmation
+  end
+
+  def destroy
+    if current_user.destroy
+      redirect_to root_path
+    else
+      render :delete_confirmation
+    end
+  end
+
   def show
     @nickname = current_user.nickname
     @words = if params[:sort_method] == 'sort_created_asc'

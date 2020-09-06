@@ -10,7 +10,10 @@ Rails.application.routes.draw do
     resources :favorites, only: [:create, :destroy]
   end
 
-  resources :users, only: [:edit, :update, :show] do
+  resources :users, only: [:edit, :update, :destroy, :show] do
+    member do
+      get 'delete_confirmation'
+    end
     resources :favorites, only: [:index]
   end
 
