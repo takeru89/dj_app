@@ -2,6 +2,17 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
   before_action :set_cache_buster
 
+  def edit
+  end
+
+  def update
+    if current_user.update(user_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+
   def show
     @nickname = current_user.nickname
     @words = if params[:sort_method] == 'sort_created_asc'
@@ -21,5 +32,9 @@ class UsersController < ApplicationController
     response.headers['Cache-Control'] = 'no-cache, no-store, max-age=0, must-revalidate'
     response.headers['Pragma'] = 'no-cache'
     response.headers['Expires'] = 'Fri, 01 Jan 1990 00:00:00 GMT'
+  end
+
+  def user_params
+    params.require(:user).permit(:nickname, :email, :password, :password_confirmation)
   end
 end
