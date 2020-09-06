@@ -1,0 +1,89 @@
+.background {
+  height: 100vh;
+  background-color: #003366;
+}
+
+.delete-wrap {
+  width: 65%;
+  max-width: 500px;
+  background-color: #003366;
+  border: 1px solid white;
+  margin: 70px auto;
+}
+
+.delete-header-text {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  margin: 30px 0 10px 0;
+}
+
+.delete-confirmation-text {
+  font-size: 20px;
+  color: white;
+  padding: 15px;
+}
+
+.delete-user {
+  text-align: center;
+  margin: 50px 0 60px 0;
+}
+
+.delete-user-button {
+  height: 30px;
+  width: 100px;
+  font-size: 14px;
+  color: #003366;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.delete-bottom {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.delete-bottom-logo {
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  padding: 5px;
+}
+
+/* responsive */
+@media (max-width: 500px) {
+
+  .delete-wrap {
+    width: 90%;
+  }
+
+  .delete-header-text {
+    font-size: 20px;
+    margin: 20px 0 10px 0;
+  }
+
+  .delete-confirmation-text {
+    font-size: 15px;
+    color: white;
+    padding: 15px;
+  }
+
+  .delete-user {
+    margin: 30px 0 20px 0;
+  }
+
+  .delete-user-button {
+    height: 20px;
+    width: 60px;
+    font-size: 10px;
+    border-radius: 5px;
+  }
+
+  .delete-bottom-logo {
+    height: 40px;
+    width: 40px;
+    padding: 5px;
+  }
+}
