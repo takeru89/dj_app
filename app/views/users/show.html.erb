@@ -1,6 +1,6 @@
 <%= render "shared/header" %>
 
-<div class="my-posts-wrap">
+<div class="my-posts-container">
   <div class="my-words">
     <div class="my-words-header">
       My Posts
@@ -12,28 +12,29 @@
       <% end %>
     </div>
   </div>
+
   <div class="my-words-list">
     <% @words.each do |word| %>
       <%= link_to word_path(word.id), class:"my-words-piece" do%>
-        <%# <div class="search-result-piece"> %>
-          <div class="my-words-japanese">
-            <div class="my-words-kana">
-              <%= word.kana %>
-            </div>
-            <% if word.kanji.present? %>
-              <div class="my-words-kanji">
-                <%= word.kanji %>
-              </div>
-            <% else %>
-              <div class="my-words-kanji">
-                ---
-              </div>
-            <% end %>
+        <div class="my-words-japanese">
+          <div class="my-words-kana">
+            <%= word.kana %>
           </div>
-          <div class="my-words-english">
-            <%= word.english %>
-          </div>   
+          <% if word.kanji.present? %>
+            <div class="my-words-kanji">
+              <%= word.kanji %>
+            </div>
+          <% else %>
+            <div class="my-words-kanji">
+              ---
+            </div>
+          <% end %>
+        </div>
+        <div class="my-words-english">
+          <%= word.english %>
+        </div>   
       <% end %>
+      
       <div class="my-words-buttons">
         <%= render partial: 'favorites/favorite', locals: { word: word } %>
         <%= link_to image_tag('edit_button.png', class:"my-words-edit-button"), edit_word_path(word.id) %>
@@ -41,6 +42,7 @@
       </div>
     <% end %>
   </div>
+
   <%= paginate @words%>
 </div>
 

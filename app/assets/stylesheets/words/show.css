@@ -1,10 +1,10 @@
-.word-info {
+.word-info-container {
   width: 70%;
   margin: 50px auto 100px;
 }
 
 /* word-info header */
-.info-header-box{
+.info-header-wrap{
   border-bottom: solid 5px #003366;
   display: flex;
   justify-content: space-between;
@@ -130,7 +130,7 @@ img.info-img-content {
 
 /* smart phone */
 @media (max-width: 500px) {
-  .word-info {
+  .word-info-container {
    width: 85%;
    margin-top: 30px;
   }

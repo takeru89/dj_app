@@ -1,6 +1,6 @@
 <%= render "shared/header" %>
 
-<div class="favorites-wrap">
+<div class="favorites-container">
   <div class="favorites-header">
     <div class="favorites-title">
       My Favorites
@@ -15,37 +15,39 @@
       </div>
     </div>
   </div>
+
   <div class="favorites-list">
-  <% @favorites.each do |favorite| %>
-    <div id="favorites-word-<%= favorite.word.id %>">
-      <%= link_to word_path(favorite.word.id), class:"favorites-piece" do %> 
-          <div class="favorites-japanese" %>
-            <div class="favorites-kana">
-              <%= favorite.word.kana %>
+    <% @favorites.each do |favorite| %>
+      <div id="favorites-word-<%= favorite.word.id %>">
+        <%= link_to word_path(favorite.word.id), class:"favorites-piece" do %> 
+            <div class="favorites-japanese" %>
+              <div class="favorites-kana">
+                <%= favorite.word.kana %>
+              </div>
+              <% if favorite.word.kanji.present? %>
+                <div class="favorites-kanji">
+                  <%= favorite.word.kanji %>
+                </div>
+              <% else %>
+                <div class="favorites-kanji">
+                  ---
+                </div>
+              <% end %>
             </div>
-            <% if favorite.word.kanji.present? %>
-              <div class="favorites-kanji">
-                <%= favorite.word.kanji %>
-              </div>
-            <% else %>
-              <div class="favorites-kanji">
-                ---
-              </div>
-            <% end %>
+            <div class="favorites-english">
+              <%= favorite.word.english %>
+            </div>   
+        <% end %>
+        <div class="favorites-piece-below">
+          <span class="favorites-piece-author">by <%= favorite.word.user.nickname %></span>
+          <div class="favorites-piece-star" >
+          <%= link_to image_tag('close_button.png', class:"star-button"), word_favorite_path(favorite.word.id, favorite.id), method: :delete, remote: true %>
           </div>
-          <div class="favorites-english">
-            <%= favorite.word.english %>
-          </div>   
-      <% end %>
-      <div class="favorites-piece-below">
-        <span class="favorites-piece-author">by <%= favorite.word.user.nickname %></span>
-        <div class="favorites-piece-star" >
-        <%= link_to image_tag('close_button.png', class:"star-button"), word_favorite_path(favorite.word.id, favorite.id), method: :delete, remote: true %>
         </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
   </div>
+  
   <%= paginate @favorites%>
 </div>
 

@@ -1,4 +1,4 @@
-.favorites-wrap {
+.favorites-container {
   width: 60%;
   margin: 0 auto 100px;
 }
@@ -139,7 +139,7 @@ img.csv-button {
 
 /* ipad */
 @media (max-width: 1000px) {
-  .favorites-wrap {
+  .favorites-container {
     width:85%;
   }
 }

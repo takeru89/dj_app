@@ -1,10 +1,10 @@
-.search-results-wrap {
+.search-results-container {
   width: 60%;
   margin: 0 auto 100px;
 }
 
 /* search results header */
-.searching-word {
+.searching-word-wrap {
   width: 100%;
   margin: 50px auto;
 }
@@ -75,7 +75,7 @@
 /* /buttons below */
 
 @media (max-width: 500px) {
-  .search-results-wrap {
+  .search-results-container {
     width: 85%;
   }
 

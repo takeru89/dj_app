@@ -1,4 +1,4 @@
-.my-posts-wrap {
+.my-posts-container {
   width: 60%;
   margin: 0 auto 100px;
 }
@@ -125,7 +125,7 @@ img.my-words-edit-button {
 
 /* ipad */
 @media (max-width: 1000px) {
-  .my-posts-wrap {
+  .my-posts-container {
     width: 85%;
   }
 }

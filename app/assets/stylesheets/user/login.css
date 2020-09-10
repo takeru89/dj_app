@@ -1,4 +1,4 @@
-.background {
+.login-wrap {
   height: 100vh;
   background-color: #003366;
 }
@@ -59,7 +59,7 @@
 
 .login {
   text-align: center;
-  margin: 60px 0 35px 0;
+  margin: 60px 0 60px 0;
 }
 
 .login-button {
@@ -70,6 +70,18 @@
   font-weight: bold;
   background-color: white;
   border-radius: 5px;
+}
+
+.login-bottom {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.login-bottom-logo {
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  padding: 5px;
 }
 
 /* smart phone */
@@ -118,6 +130,12 @@
     width: 60px;
     font-size: 10px;
     border-radius: 5px;
+  }
+
+  .login-bottom-logo {
+    height: 40px;
+    width: 40px;
+    padding: 5px;
   }
 }
 /* /smart phone */
