@@ -12,6 +12,7 @@
   background-color: #003366;
 }
 
+/* smart phone */
 @media (max-width: 500px) {
   .error-alert {
     display: flex;
@@ -24,3 +25,4 @@
     font-size: 12px;
   }
 }
+/* /smart phone */

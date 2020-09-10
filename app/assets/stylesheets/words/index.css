@@ -4,9 +4,6 @@
   justify-content: center;
 }
 
-.tag-cloud{
-}
-
 .tagcloud-piece {
   color: rgb(31, 30, 30);
   font-size: 15px;
@@ -16,12 +13,12 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; */
 }
+/* /tag cloud */
 
 /* app introduction */
 .about {
   background-color: #003366;
   padding: 30px 0;
-  /* min-width: 700px; */
 }
 
 .about-box {
@@ -80,8 +77,7 @@
   display: block;
   margin: 30px auto 0;
 }
-
-
+/* /app introduction */
 
 /* top page after logging in */
 .user-top {
@@ -92,6 +88,7 @@
 .user-contents {
   display: flex;
 }
+/* /top page after logging in */
 
 /* Requested Words */
 .request-wrap {
@@ -215,6 +212,7 @@
 .swiper-pagination-spotlight {
   text-align: center;
 }
+/* /Spotlight */
 
 /* smart phone */
 @media (max-width: 500px) {
@@ -315,3 +313,4 @@
     text-align: center;
   }
 }
+/* /smart phone */

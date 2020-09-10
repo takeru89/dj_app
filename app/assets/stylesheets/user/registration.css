@@ -70,7 +70,7 @@
   border-radius: 5px;
 }
 
-/* responsive */
+/* smart phone */
 @media (max-width: 500px) {
 
   .form-wrap {
@@ -118,3 +118,4 @@
     border-radius: 5px;
   }
 }
+/* /smart phone */

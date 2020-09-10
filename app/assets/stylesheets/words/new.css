@@ -106,13 +106,15 @@
   margin: 30px auto 0;
 }
 
-/* responsive */
+/* ipad */
 @media (max-width: 1100px) {
   .word-registration {
     width:70%;
   }
 }
+/* /ipad */
 
+/* smart phone */
 @media (max-width: 500px) {
   .word-registration {
     width:85%;
@@ -145,3 +147,4 @@
     font-size: 13px;
   }  
 }
+/* /smart phone */

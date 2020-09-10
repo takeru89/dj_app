@@ -52,7 +52,7 @@
   padding: 5px;
 }
 
-/* responsive */
+/* smart phone */
 @media (max-width: 500px) {
 
   .delete-wrap {

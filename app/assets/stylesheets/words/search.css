@@ -1,15 +1,13 @@
-/* 検索結果一覧 */
 .search-results-wrap {
   width: 60%;
   margin: 0 auto 100px;
 }
 
+/* search results header */
 .searching-word {
   width: 100%;
   margin: 50px auto;
 }
-
-
 
 .search-word-text {
   font-size: 25px;
@@ -17,8 +15,9 @@
   border-bottom: 5px solid #003366;
   margin: 0 auto;
 }
+/* /search results header */
 
-
+/* search results list */
 .search-result-piece {
   width: 100%;
   margin: 0 auto;
@@ -47,7 +46,9 @@
   padding-left: 20px;
   border-left: 2px solid black;
 }
+/* /search results list */
 
+/* buttons below */
 .below-word-piece {
   height: 30px;
   width: 100%;
@@ -71,6 +72,7 @@
   text-align: end;
   vertical-align: top;
 }
+/* /buttons below */
 
 @media (max-width: 500px) {
   .search-results-wrap {

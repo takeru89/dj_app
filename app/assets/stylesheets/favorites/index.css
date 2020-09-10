@@ -85,49 +85,49 @@ img.csv-button {
   vertical-align: top;
 }
 
-/* ソート */
+/* sort form */
 .sort-form {
   display: flex;
   align-items: center;
 }
 
 .sort-filtering {
-  position: relative; /* 選択ボックスの位置指定 */
-  display: block; /* ブロックレベル要素化にする */
-  width: 180px; /* ボックスの高さを指定する */
-  border: 2px solid #003366;/* ボックスの境界線を実線で指定する */
-  border-radius: 5px; /* ボックスに角丸を指定する */
+  position: relative;
+  display: block;
+  width: 180px;
+  border: 2px solid #003366;
+  border-radius: 5px;
 }
   
 .sort-filtering:before {
-  position: absolute; /* 矢印の位置を指定する */
-  content: ""; /* 矢印のコンテンツ */
-  top: 50%; /* 下部から配置の基準位置を決める */
-  right: 10px; /* 右側から配置の基準位置を決める */
-  width:0px; /* ボックスの横幅をなしに指定する */
-  height:0px; /* ボックスの高さをなしに指定する */
-  margin: -2px 0 0 0; /* ボックス外側の余白を指定する */
-  border: 5px solid transparent; /* 矢印の境界線を透過する */
-  border-top: 5px solid #003366; /* 矢印ボックス上部の境界線を実線で指定する */
-  cursor: pointer; /* マウスカーソルの形を指定する */
-  pointer-events: none; /* マウスイベントを制御する */
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 10px;
+  width:0px;
+  height:0px;
+  margin: -2px 0 0 0;
+  border: 5px solid transparent;
+  border-top: 5px solid #003366;
+  cursor: pointer;
+  pointer-events: none;
 }
 
 .sort-filtering select {
-  -webkit-appearance: none;/* ベンダープレフィックス(Google Chrome、Safari用) */
-  -moz-appearance: none; /* ベンダープレフィックス(Firefox用) */
-  appearance: none; /* 標準のスタイルを無効にする */
-  display: block; /* ブロックレベル要素化する */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: block;
   height: 26px;
-  width: 177px; /* ボックスの高さを指定する */
-  padding-left: 10px; /* ボックス内側の余白を指定する */
-  color: #003366; /* フォントの色を指定 */
-  border: none; /* 境界線をなしに指定する */
-  border-radius: 5px; /* 角丸を指定する */
-  background: transparent;/* 背景を透過指定する */
+  width: 177px;
+  padding-left: 10px;
+  color: #003366;
+  border: none;
+  border-radius: 5px;
+  background: transparent;
 }
 
-::-ms-expand { /* select要素のデザインを無効にする（IE用） */
+::-ms-expand {
   display: none;
 }
 
@@ -137,13 +137,15 @@ img.csv-button {
   margin-left: 3px;
 }
 
-/* responsive */
+/* ipad */
 @media (max-width: 1000px) {
   .favorites-wrap {
     width:85%;
   }
 }
+/* /ipad */
 
+/* smart phone */
 @media (max-width: 500px) {
   .favorites-header {
     margin: 30px auto;
@@ -175,7 +177,7 @@ img.csv-button {
   }
 
   .sort-filtering {
-    width: 140px; /* ボックスの高さを指定する */
+    width: 140px;
     font-size: 12px;
     float: right;
   }
@@ -227,3 +229,4 @@ img.csv-button {
     vertical-align: top;
   }
 }
+/* /smart phone */
