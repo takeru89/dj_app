@@ -30,6 +30,7 @@ footer {
   margin-top: auto;
 }
 
+/* smart phone */
 @media (max-width: 500px) {
   .main {
     min-width: 0px;
@@ -39,3 +40,4 @@ footer {
     margin-top: auto;
   }
 }
+/* /smart phone */

@@ -1,18 +1,5 @@
 <%= render "shared/header" %>
 
-<script>
-	$(document).ready(function(){
-		$('#tagcloud').tagoSphere({
-		});
-	});
-</script>
-<style>
-* {
-  list-style-type: none;
-  text-decoration: none;
-}
-</style>
-
 <div class="tag-cloud-wrap">
   <div id="tagcloud", class="tag-cloud">
     <ul>
@@ -22,6 +9,13 @@
     </ul>
   </div>
 </div>
+
+<script>
+	$(document).ready(function(){
+		$('#tagcloud').tagoSphere({
+		});
+	});
+</script>
 
 <% if user_signed_in? %>
   <div class="user-top">

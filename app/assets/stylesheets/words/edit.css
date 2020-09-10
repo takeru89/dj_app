@@ -1,11 +1,6 @@
-/* フォーム全体 */
-.edit-wrap {
-}
-
 .word-edit {
   width: 50%;
   margin: 50px auto;
-
 }
 
 .edit-header-text {
@@ -15,7 +10,6 @@
   margin: 0 auto;
 }
 
-/* フォーム内部 */
 .edit-contents {
   margin-top: 50px;
 }
@@ -65,8 +59,7 @@
   border-radius: 5px;
 }
 
-/* 投稿ボタン */
-.edit {
+.edit-post-button-wrap {
   margin-bottom: 150px;
 }
 
@@ -102,12 +95,15 @@
   margin: 30px auto 0;
 }
 
+/* ipad */
 @media (max-width: 1100px) {
   .word-edit {
     width:70%;
   }
 }
+/* /ipad */
 
+/* smart phone */
 @media (max-width: 500px) {
   .word-edit {
     width:85%;
@@ -143,3 +139,4 @@
     font-size: 13px;
   }  
 }
+/* /smart phone */

@@ -1,15 +1,14 @@
 <%= render "shared/header" %>
 
-<div class="search-results-wrap">
-  <div class="searching-word">
+<div class="search-results-container">
+  <div class="searching-word-wrap">
     <div class="search-word-text">
       results for "<%= @word %>"
     </div>
   </div>
-  <div class="search-wrap">
-  <% @words.each do |word| %>
-    <%= link_to word_path(word.id), class:"search-result-piece" do%>
-      <%# <div class="search-result-piece"> %>
+  <div class="search-result-piece-wrap">
+    <% @words.each do |word| %>
+      <%= link_to word_path(word.id), class:"search-result-piece" do%>
         <div class="japanese">
           <div class="search-kana">
             <%= word.kana %>
@@ -27,16 +26,17 @@
         <div class="search-english">
           <%= word.english %>
         </div>
-    <% end %>
-    <div class="below-word-piece" id="ss">
-      <span class="author">by <%= word.user.nickname %></span>
-      <div class="search-star", id="star-<%= word.id %>">
-      <% if user_signed_in? %>
-      <%= render partial: 'favorites/favorite', locals: { word: word } %>
       <% end %>
+
+      <div class="below-word-piece" id="ss">
+        <span class="author">by <%= word.user.nickname %></span>
+        <div class="search-star", id="star-<%= word.id %>">
+          <% if user_signed_in? %>
+            <%= render partial: 'favorites/favorite', locals: { word: word } %>
+          <% end %>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
   </div>
   <%= paginate @words%>
 </div>

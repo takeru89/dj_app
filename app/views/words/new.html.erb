@@ -1,6 +1,6 @@
 <%= render "shared/header" %>
 
-<div class="post-wrap">
+<div class="post-container">
   <%= form_with model: @word, url: words_path, class: "word-registration", local: true do |f| %>
     <div class="post-header">
       <h1 class="post-header-text">
@@ -49,7 +49,8 @@
         <%= f.text_area :explanation, class:"explanation-text" %>
       </div>
     </div>
-    <div class="post">
+
+    <div class="post-button-wrap">
       <%= f.submit "Post", class:"post-button" %>
       <%= link_to "Cancel", :back, class:"cancel-button" %>
     </div>

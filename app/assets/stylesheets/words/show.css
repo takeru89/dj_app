@@ -1,10 +1,10 @@
-.word-info {
+.word-info-container {
   width: 70%;
   margin: 50px auto 100px;
 }
 
-/* word heading */
-.info-header-box{
+/* word-info header */
+.info-header-wrap{
   border-bottom: solid 5px #003366;
   display: flex;
   justify-content: space-between;
@@ -31,6 +31,7 @@ img.edit-button {
   width: 30px;
   height: 30px;
 }
+/* /word-info header */
 
 /* word contents */
 .info-upper {
@@ -73,6 +74,7 @@ img.info-img-content {
   border-radius: 5px;
   object-fit: contain;
 }
+/* /word contents */
 
 /* details */
 .info-lower {
@@ -92,6 +94,7 @@ img.info-img-content {
   padding: 10px;
   font-size: 15px;
 }
+/* /details */
 
 /* transition buttons */
 .transition-buttons {
@@ -123,16 +126,11 @@ img.info-img-content {
   border-radius: 5px;
   padding: 5px;
 }
+/* /transition buttons */
 
-/* responsive */
-/* @media (max-width: 1000px) {
-  .info-header, .info-upper, .info-lower {
-    width:85%;
-  }
-} */
-
+/* smart phone */
 @media (max-width: 500px) {
-  .word-info {
+  .word-info-container {
    width: 85%;
    margin-top: 30px;
   }
@@ -210,3 +208,4 @@ img.info-img-content {
     width: 40px;
   }
 }
+/* /smart phone */
