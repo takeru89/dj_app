@@ -6,12 +6,10 @@ class WordsController < ApplicationController
   def index
     @words = Word.includes(:user).order('created_at DESC').limit(200)
     @requests = Request.includes(:user).wrequest.order('created_at DESC')
-    
+
     img_attached_words = []
     @words.each do |word|
-      if word.image.present?
-      img_attached_words.push(word)
-      end
+      img_attached_words.push(word) if word.image.present?
     end
     @random_words = img_attached_words.sample(5)
   end
