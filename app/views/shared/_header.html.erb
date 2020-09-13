@@ -13,7 +13,7 @@
       <% if user_signed_in? %>
         <ul class="header-right-lists">
           <li class="user_name"><%= current_user.nickname %></li>
-          <li><%= link_to image_tag('pen_button.png', class:"header-right-button"), new_word_path %></li>
+          <li class="post-link"><%= link_to image_tag('pen_button.png', class:"header-right-button"), new_word_path %></li>
           <li><%= image_tag 'my_page_button.png', class:"header-right-button" %>
             <ul class="sub-my-page"> 
               <li><%= link_to "My Posts", user_path(current_user.id), class: "header-right-sub" %></li> 

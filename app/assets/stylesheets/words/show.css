@@ -21,7 +21,7 @@
   justify-content: end;
 }
 
-img.edit-button {
+img.edit-word-button, img.delete-word-button {
   width: 30px;
   height: 30px;
   margin-left: 5px;
@@ -144,7 +144,7 @@ img.info-img-content {
     font-weight: bold;
   }
 
-  img.edit-button {
+  img.edit-word-button, img.delete-word-button {
     width: 20px;
     height: 20px;
     margin-left: 5px;
