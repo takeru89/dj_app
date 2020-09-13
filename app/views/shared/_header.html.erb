@@ -20,7 +20,7 @@
               <li><%= link_to "My Favorites", user_favorites_path(current_user.id), class: "header-right-sub" %></li>
             </ul>
           </li>
-          <li><%= image_tag 'key_button.png', class:"header-right-button" %>
+          <li class="sub-out-lists"><%= image_tag 'key_button.png', class:"header-right-button" %>
             <ul class="sub-out">
               <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class:"header-right-sub" %></li>
               <li><%= link_to "Edit", edit_user_path(current_user), class:"header-right-sub" %></li>
