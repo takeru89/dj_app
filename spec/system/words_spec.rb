@@ -196,9 +196,9 @@ RSpec.describe '語彙削除', type: :system do
       find('.delete-word-button').click
       # 削除確認メッセージが表示され、OKを押すと削除される
       expect {
-      expect(page.driver.browser.switch_to.alert.text).to eq "Do you really want to delete this word-info?"
-      page.driver.browser.switch_to.alert.accept
-      expect(page).to have_no_content(@word.kana)
+        expect(page.driver.browser.switch_to.alert.text).to eq "Do you really want to delete this word-info?"
+        page.driver.browser.switch_to.alert.accept
+        expect(page).to have_no_content(@word.kana)
       }.to change { Word.count }.by(-1)
       # マイ投稿一覧ページへ遷移したことを確認する
       expect(current_path).to eq user_path(@word.user.id)
