@@ -37,7 +37,7 @@
 - リクエスト機能（Javascript）
 - 注目語彙表示機能（Swiper）
 - ページネーション（kaminari）
-- モデル単体テスト（RSpec）
+- モデル単体テスト、結合テスト（RSpec）
 - コード整形（Rubocop）
 - デプロイ（EC2, Route53, ACM, ELB, Capistrano）
 
