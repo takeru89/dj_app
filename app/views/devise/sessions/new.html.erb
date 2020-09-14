@@ -14,13 +14,13 @@
 
       <div class="form-group">
         <div class="form-text-wrap">
-          <label class="form-text">Email</label>
+          <%= f.label :email, "Email", class: "form-text" %>
         </div>
         <%= f.email_field :email, class: "form-content" %>
       </div>
       <div class="form-group">
         <div class="form-text-wrap">
-          <label class="form-text">Password</label>
+          <%= f.label :password, "Password", class: "form-text" %>
         </div>
         <%= f.password_field :password, class: "form-content" %>
       </div>

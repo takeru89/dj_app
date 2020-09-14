@@ -5,5 +5,6 @@ FactoryBot.define do
     english       { 'apple' }
     word_class_id { 2 }
     explanation   { 'りんごを5個食べました。' }
+    association :user
   end
 end
