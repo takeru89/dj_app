@@ -1,18 +1,20 @@
 /* tag cloud */
 .tag-cloud-wrap {
+  width: 100%;
   display: flex;
   justify-content: center;
 }
 
+.canvas {
+  width:100%;
+}
+
 .tagcloud-piece {
-  color: rgb(31, 30, 30);
-  font-size: 15px;
-  font-weight: bold;
   list-style: none;
   text-decoration: none;
 }
 /* /tag cloud */
-
+ 
 /* app introduction */
 .about {
   background-color: #003366;
@@ -214,14 +216,6 @@
 
 /* smart phone */
 @media (max-width: 500px) {
-  .tag-cloud {
-    margin: 15px 0;
-  }
-
-  .tagcloud-piece {
-    font-size: 10px;
-  }
-
   .info-title {
     font-size: 20px;
     font-style: italic;
