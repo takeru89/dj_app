@@ -23,11 +23,11 @@
 
 ## 4. 実装機能
 - ユーザー管理機能（devise）
-- 語彙投稿一覧表示機能: トップページ（jquery plugin）
+- 語彙投稿一覧表示機能: トップページ（TagCanvas）
 - 語彙詳細表示機能
 - 語彙編集機能
 - 語彙削除機能
-- 語彙投稿機能（Active Hash, Active Storage）※画像はS3に保存
+- 語彙投稿機能（Active Hash, Active Storage）
 - 語彙検索機能
 - マイ投稿一覧表示機能
 - お気に入り登録・解除機能（jquery）
@@ -39,7 +39,7 @@
 - ページネーション（kaminari）
 - モデル単体テスト、結合テスト（RSpec）
 - コード整形（Rubocop）
-- デプロイ（EC2, Route53, ACM, ELB, Capistrano）
+- デプロイ（EC2, S3, Route53, ACM, ELB, Capistrano）
 
  <br>
 
