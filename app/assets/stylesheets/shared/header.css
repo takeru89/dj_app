@@ -96,6 +96,11 @@
   z-index: 2;
 }
 
+.header-right-sub:hover {
+  color: white;
+  background-color: skyblue;
+}
+
 .header-right-lists li:hover .sub-out li{
   overflow: visible;
   height: 30px;

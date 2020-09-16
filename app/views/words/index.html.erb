@@ -1,21 +1,56 @@
 <%= render "shared/header" %>
 
+<%# tagcloud %>
 <div class="tag-cloud-wrap">
-  <div id="tagcloud", class="tag-cloud">
-    <ul>
-      <% @words.each do |w| %>
-        <li><%= link_to w.kana, word_path(w.id), class: "tagcloud-piece" %></li>
-      <% end %>
-    </ul>
+  <div id="myCanvasContainer", class="canvas-container" >
+    <canvas  id="myCanvas", class="canvas">
+      <div id="tags", class="tag-cloud">
+        <ul>
+          <% @words.each do |w| %>
+            <li><%= link_to w.kana, word_path(w.id), class: "tagcloud-piece" %></li>
+          <% end %>
+        </ul>
+      </div>
+    </canvas>
   </div>
 </div>
 
 <script>
-	$(document).ready(function(){
-		$('#tagcloud').tagoSphere({
-		});
-	});
+  function createTagCloud() {
+    const canvas = document.getElementById( "myCanvas" ) ;
+    if (window.matchMedia('(max-width:500px)').matches) {
+      canvas.width = 350;
+      canvas.height = 350;
+
+      TagCanvas.Start('myCanvas','tags',{
+        textHeight: 10,
+        textColour: 'black',
+        outlineColour: 'transparent',
+        reverse: true,
+        depth: 0.1,
+        maxSpeed: 0.05,
+        wheelZoom: false,
+      });
+
+    } else {
+      canvas.width = 750;
+      canvas.height = 750;
+
+      TagCanvas.Start( 'myCanvas', 'tags', {
+        textColour: 'black',
+        outlineColour: 'transparent',
+        reverse: true,
+        depth: 0.1,
+        maxSpeed: 0.05,
+        wheelZoom: false,
+      });
+    };
+  }
+
+  window.addEventListener("load", createTagCloud);
+  window.addEventListener("resize", createTagCloud);
 </script>
+<%# /tagcloud %>
 
 <% if user_signed_in? %>
   <div class="user-top">
@@ -87,11 +122,8 @@
               <% end %>
             </div>
             <div class="swiper-pagination-spotlight"></div>
-
-            <!-- If we need navigation buttons -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
-
           </div>
         </div>
       </div>
@@ -99,7 +131,10 @@
 
     </div>
   </div>
+
 <%else%>
+
+  <%# About %>
   <div class="about">
     <div class="about-box">
       <p class="info-contents">
@@ -122,6 +157,8 @@
       <%= link_to "Login", new_user_session_path, method: :get, class:"login-link-button"%>
     </div>
   </div>
+  <%# /About %>
+
 <% end %>
 
 <%= render "shared/footer_1" %>

@@ -94,6 +94,11 @@ img.info-img-content {
   padding: 10px;
   font-size: 15px;
 }
+
+.info-author {
+  font-size: 18px;
+  float: right;
+}
 /* /details */
 
 /* transition buttons */
@@ -190,6 +195,10 @@ img.info-img-content {
     vertical-align: text-top;
     padding: 5px;
     font-size: 10px;
+  }
+
+  .info-author {
+    font-size: 12px;
   }
 
   .info-img-box {
